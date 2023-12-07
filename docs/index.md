@@ -4,11 +4,11 @@ layout: home
 
 hero:
   name: "图南的编程笔记"
-  text: " "
+  text: "人之为学，不可自小，又不可自大。"
   image:
-    src: public/logo.png
+    src: /logo.png
     alt: VitePress
-  tagline:
+  tagline: "读书之法，在循序而渐进，熟读而精思。"
   actions:
     - theme: brand
       text: Markdown Examples
