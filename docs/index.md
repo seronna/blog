@@ -3,9 +3,12 @@
 layout: home
 
 hero:
-  name: "My Awesome Project"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: "图南的编程笔记"
+  text: " "
+  image:
+    src: public/logo.png
+    alt: VitePress
+  tagline:
   actions:
     - theme: brand
       text: Markdown Examples
@@ -15,11 +18,11 @@ hero:
       link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 🍓阅读
+    details: 书是人类进步的阶梯，书籍是知识的摇篮
+  - title: 🍐写作
+    details: 写作时最好的学习方式
+  - title: 🍋编码
+    details: 程序员的能力与他写过的代码是正比的
 ---
 
