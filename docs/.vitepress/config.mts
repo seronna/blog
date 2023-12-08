@@ -11,6 +11,9 @@ export default defineConfig({
         nav: [
             {text: 'Home', link: '/'},
             {
+                text: "学习路线", link: '/study/'
+            },
+            {
                 text: 'Java', items: [
                     {text: 'Java基础', link: '/java/base/'},
                     {text: 'Java进阶', link: '/java/advanced/'}
@@ -23,13 +26,13 @@ export default defineConfig({
         ],
 
         sidebar: [
-            {
-                text: 'Examples',
-                items: [
-                    {text: 'Markdown Examples', link: '/markdown-examples'},
-                    {text: 'Runtime API Examples', link: '/api-examples'}
-                ]
-            }
+            // {
+            //     text: 'Examples',
+            //     items: [
+            //         {text: 'Markdown Examples', link: '/markdown-examples'},
+            //         {text: 'Runtime API Examples', link: '/api-examples'}
+            //     ]
+            // }
         ],
 
         socialLinks: [
