@@ -5,6 +5,8 @@ import DefaultTheme from 'vitepress/theme'
 import './style.css'
 // @ts-ignore
 import Comment from "./Comment.vue";
+// @ts-ignore
+import siteList from "./components/siteList.vue";
 
 export default {
     extends: DefaultTheme,
@@ -15,6 +17,6 @@ export default {
         })
     },
     enhanceApp({app, router, siteData}) {
-        // ...
+        app.component("SiteList", siteList)
     }
 } satisfies Theme

@@ -14,15 +14,31 @@ export default defineConfig({
                 text: "学习路线", link: '/study/'
             },
             {
+                text: '网址导航', link: '/siteList/'
+            },
+            {
                 text: 'Java', items: [
                     {text: 'Java基础', link: '/java/base/'},
-                    {text: 'Java进阶', link: '/java/advanced/'}
+                    {text: 'Java进阶', link: '/java/advanced/'},
+                    {
+                        text: '', items: []
+                    }
                 ]
             },
-            {text: '算法', link: '/algorithm/'},
-            {text: '工具&部署', link: '/tools/'},
-            {text: '项目', link: '/project/'},
-            {text: 'gitte', link: 'https://gitee.com/xia-haike'}
+            {
+                text: '方法论', items: [
+                    {text: '代码规范', link: '/methodology/code/'},
+                    {
+                        items: [
+                            {text: '设计模式', link: '/methodology/design/'},
+                        ]
+                    },
+                ]
+            },
+            // {text: '算法', link: '/algorithm/'},
+            // {text: '工具&部署', link: '/tools/'},
+            // {text: '项目', link: '/project/'},
+            {text: 'gitee', link: 'https://gitee.com/xia-haike'}
         ],
 
         sidebar: [
