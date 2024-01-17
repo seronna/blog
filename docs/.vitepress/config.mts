@@ -38,7 +38,7 @@ export default defineConfig({
             // {text: '算法', link: '/algorithm/'},
             // {text: '工具&部署', link: '/tools/'},
             // {text: '项目', link: '/project/'},
-            {text: 'gitee', link: 'https://gitee.com/xia-haike'}
+            // {text: 'gitee', link: 'https://gitee.com/xia-haike'}
         ],
 
         sidebar: [
@@ -67,6 +67,25 @@ export default defineConfig({
         ],
         footer: {
             copyright: 'Copyright @ 2023 TuNan All rights reserved',
+        },
+        search: {
+            provider: "local",
+            options: {
+                translations: {
+                    button: {
+                        buttonText: "搜索文档",
+                        buttonAriaLabel: "搜索文档"
+                    },
+                    modal: {
+                        noResultsText: "没有找到结果",
+                        resetButtonTitle: "重置搜索",
+                        footer: {
+                            selectText: "选择",
+                            navigateText: "切换",
+                        }
+                    }
+                }
+            }
         }
     }
 })
