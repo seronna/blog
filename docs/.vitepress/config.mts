@@ -1,10 +1,12 @@
 import {defineConfig} from 'vitepress'
+import {set_sidebar} from "./utils/auto-gen-sidebar.mjs";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     base: '/blog/',
     title: "图南的编程笔记",
     description: "图南的编程笔记",
+    lastUpdated: true,
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         logo: "/clover.svg",
@@ -28,11 +30,7 @@ export default defineConfig({
             {
                 text: '方法论', items: [
                     {text: '代码规范', link: '/methodology/code/'},
-                    {
-                        items: [
-                            {text: '设计模式', link: '/methodology/design/'},
-                        ]
-                    },
+                    {text: '设计模式', link: '/methodology/design/'},
                 ]
             },
             // {text: '算法', link: '/algorithm/'},
@@ -40,17 +38,8 @@ export default defineConfig({
             // {text: '项目', link: '/project/'},
             // {text: 'gitee', link: 'https://gitee.com/xia-haike'}
         ],
-
-        sidebar: [
-            // {
-            //     text: 'Examples',
-            //     items: [
-            //         {text: 'Markdown Examples', link: '/markdown-examples'},
-            //         {text: 'Runtime API Examples', link: '/api-examples'}
-            //     ]
-            // }
-        ],
-
+        // sidebar: { "/front-end/react": set_sidebar("front-end/react") },
+        sidebar: {"/docs/study/": set_sidebar("/docs/study/java")},
         socialLinks: [
             {
                 icon: {
