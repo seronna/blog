@@ -32,8 +32,8 @@ jobs:
       - name: pnpm install
         run: pnpm install  # 安装依赖
 
-      - name: vite build
-        run: pnpm docs:build # 构建项目
+      - name: vite doc-build
+        run: pnpm docs:doc-build # 构建项目
 
       - uses: actions/configure-pages@v2
       - uses: actions/upload-pages-artifact@v1

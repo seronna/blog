@@ -5,6 +5,7 @@ import {set_sidebar} from "./utils/auto-gen-sidebar.mjs";
 export default defineConfig({
     // 设置域名取消base值
     // 参考issues https://github.com/vuejs/vitepress/issues/3513
+    // 如不设置域名则为 base: '/blog/'
     base: '/',
     title: "图南的编程笔记",
     description: "图南的编程笔记",
@@ -28,6 +29,37 @@ export default defineConfig({
                     {
                         text: '', items: []
                     }
+                ]
+            },
+            {
+                text: "文档搭建",
+                items: [
+                    {
+                        // 分组标题1
+                        text: '介绍',
+                        items: [
+                            {text: '前言', link: '/doc-build/preface/'},
+                        ],
+                    },
+                    {
+                        // 分组标题2
+                        text: '基础设置',
+                        items: [
+                            {text: '快速上手', link: '/doc-build/getting-started/'},
+                            {text: '配置', link: '/doc-build/configuration/'},
+                            {text: '页面', link: '/doc-build/page/'},
+                            {text: 'Frontmatter', link: '/doc-build/frontmatter/'},
+                        ],
+                    },
+                    {
+                        // 分组标题3
+                        text: '进阶玩法',
+                        items: [
+                            {text: 'markdown', link: '/doc-build/markdown/'},
+                            {text: '团队', link: '/doc-build/team/'},
+                            {text: '静态部署', link: '/doc-build/assets/'},
+                        ],
+                    },
                 ]
             },
             {

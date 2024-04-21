@@ -6,7 +6,7 @@ export const NAV_DATA: NavData[] = [
         title: 'AI 导航',
         items: [
             {
-                icon: '/icons/chatgpt.png',
+                icon: '/public/openai.png',
                 title: 'ChatGPT',
                 link: 'https://chat.openai.com/chat'
             },
