@@ -33,7 +33,7 @@ jobs:
         run: pnpm install  # 安装依赖
 
       - name: vite build
-        run: pnpm run build-only # 构建项目
+        run: vitepress build docs # 构建项目
 
 
 
