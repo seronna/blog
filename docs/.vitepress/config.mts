@@ -3,7 +3,9 @@ import {set_sidebar} from "./utils/auto-gen-sidebar.mjs";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    base: '/blog/',
+    // 设置域名取消base值
+    // 参考issues https://github.com/vuejs/vitepress/issues/3513
+    base: '/',
     title: "图南的编程笔记",
     description: "图南的编程笔记",
     lastUpdated: true,
