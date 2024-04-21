@@ -28,6 +28,10 @@ export default defineConfig({
                     }
                 ]
             },
+            {
+                text: "关于",
+                link: '/about/'
+            }
             // {text: '算法', link: '/algorithm/'},
             // {text: '工具&部署', link: '/tools/'},
             // {text: '项目', link: '/project/'},
