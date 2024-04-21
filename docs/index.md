@@ -11,11 +11,8 @@ hero:
   tagline: "读书之法，在循序而渐进，熟读而精思。"
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: 关于
       link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
 
 features:
   - title: 🍓阅读

@@ -13,10 +13,11 @@ export default defineConfig({
         nav: [
             {text: 'Home', link: '/'},
             {
-                text: "学习路线", link: '/study/'
+                text: "导航",
+                link: '/nav/'
             },
             {
-                text: '网址导航', link: '/siteList/'
+                text: "学习路线", link: '/study/'
             },
             {
                 text: 'Java', items: [
@@ -25,12 +26,6 @@ export default defineConfig({
                     {
                         text: '', items: []
                     }
-                ]
-            },
-            {
-                text: '方法论', items: [
-                    {text: '代码规范', link: '/methodology/code/'},
-                    {text: '设计模式', link: '/methodology/design/'},
                 ]
             },
             // {text: '算法', link: '/algorithm/'},
