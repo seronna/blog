@@ -33,7 +33,7 @@ jobs:
         run: pnpm install  # 安装依赖
 
       - name: vite build
-        run: pnpm build # 构建项目
+        run: pnpm docs:build # 构建项目
 
       - uses: actions/configure-pages@v2
       - uses: actions/upload-pages-artifact@v1
