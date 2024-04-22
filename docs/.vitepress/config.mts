@@ -69,7 +69,39 @@ export default defineConfig({
             // {text: 'gitee', link: 'https://gitee.com/xia-haike'}
         ],
         // sidebar: { "/front-end/react": set_sidebar("front-end/react") },
-        sidebar: {"/docs/study/": set_sidebar("/docs/study/java")},
+        sidebar: {
+            // "/docs/study/": set_sidebar("/docs/study/java"),
+            "/doc-build/": [
+                {
+                    text: '介绍',
+                    items: [
+                        {text: "前言", link: '/doc-build/preface/index.md'},
+                    ]
+                },
+                {
+                    // 分组标题2
+                    text: '基础设置',
+                    collapsed: false,
+                    items: [
+                        {text: '快速上手', link: '/doc-build/getting-started/index.md'},
+                        {text: '配置', link: '/doc-build/configuration/index.md'},
+                        {text: '页面', link: '/doc-build/page/index.md'},
+                        {text: 'Frontmatter', link: '/doc-build/frontmatter/index.md'},
+                    ],
+                },
+                {
+                    // 分组标题3
+                    text: '进阶玩法',
+                    collapsed: false,
+                    items: [
+                        {text: 'markdown', link: '/doc-build/markdown/index.md'},
+                        {text: '团队', link: '/doc-build/team/index.md'},
+                        {text: '静态部署', link: '/doc-build/assets/index.md'},
+                    ],
+                },
+            ],
+            // "/doc-build/": set_sidebar("/docs/doc-build/"),
+        },
         socialLinks: [
             {
                 icon: {
