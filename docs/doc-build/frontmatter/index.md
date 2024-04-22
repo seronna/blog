@@ -158,7 +158,7 @@ style >
 ```
 
 ::: tip 说明
-[其他美化方案请点我查看](./style)
+[其他美化方案请点我查看](../style/index.md)
 :::
 
 ## Features
@@ -172,6 +172,7 @@ style >
 * 图片：直接引用，也可以使用明暗色图区别开
 
 *
+
 SVG图形：[iconfont](https://www.iconfont.cn/)、[xicons](https://www.xicons.org/#/zh-CN)、[iconpark](https://iconpark.oceanengine.com/official)
 :::
 
@@ -260,7 +261,7 @@ aside: false
 ::: warning 注意
 设置到六级标题可以用 `'deep'` ，关闭 `false`
 
-此设置与 [页面中的大纲](./page.md#大纲) 设置相同，会覆盖！
+此设置与 [页面中的大纲](../page/index.md#大纲) 设置相同，会覆盖！
 :::
 
 ```yaml

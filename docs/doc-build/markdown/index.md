@@ -124,12 +124,12 @@ export default defineConfig({
 内部链接引用，输入：
 
 ```md
-[点我跳转：Frontmatter文章中的大纲](./frontmatter.md#大纲)
+[点我跳转：Frontmatter文章中的大纲](../frontmatter/index.md#大纲)
 ```
 
 输出：
 
-[点我跳转：Frontmatter文章中的大纲](./frontmatter.md#大纲)
+[点我跳转：Frontmatter文章中的大纲](../frontmatter/index.md#大纲)
 
 外部链接引用，输入：
 
@@ -261,7 +261,7 @@ Hello, VitePress!
 ::: danger 为什么和我不一样？
 因为我对样式进行了修改，还原了beta时用的样式
 
-详情请看 [样式美化 - badge颜色](./style.md#badge颜色)
+详情请看 [样式美化 - badge颜色](../style/index.md#badge颜色)
 :::
 
 ::: warning 注意
@@ -683,7 +683,7 @@ yarn -v
 ::: tip 说明
 为什么我又3个小圆点，因为我更改了样式
 
-可以等你搭建完成再来修改 [代码组风格](./style#代码组风格)
+可以等你搭建完成再来修改 [代码组风格](../style/index.md#代码组风格)
 :::
 
 ::: code-group
@@ -849,7 +849,7 @@ const members = [
 要创建团队页面，首先创建一个新的 `md` 文件。 文件名并不重要，但这里我们将其命名为 `team.md`
 :::
 
-在此文件中，设置 [frontmatter](./frontmatter.md#首页) 选项 `layout: page`，然后使用 TeamPage 组件构建页面结构
+在此文件中，设置 [frontmatter](../frontmatter/index.md#首页) 选项 `layout: page`，然后使用 TeamPage 组件构建页面结构
 
 输入：
 
@@ -908,7 +908,7 @@ const members = [
 `<VPMembers>` 的工作方式与在文档页面中使用时相同，它将显示成员列表
 :::
 
-[点我查看：团队成员信息](./team.md)
+[点我查看：团队成员信息](../team/index.md)
 
 ### 合作伙伴
 
@@ -993,7 +993,7 @@ const partners = [
 
 输出：
 
-[点我查看：团队成员信息](./team.md)
+[点我查看：团队成员信息](../team/index.md)
 
 ### 组件显示成员
 

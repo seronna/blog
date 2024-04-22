@@ -26,9 +26,6 @@ export default defineConfig({
                 text: 'Java', items: [
                     {text: 'Java基础', link: '/java/base/'},
                     {text: 'Java进阶', link: '/java/advanced/'},
-                    {
-                        text: '', items: []
-                    }
                 ]
             },
             {

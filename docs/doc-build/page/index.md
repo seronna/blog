@@ -2,9 +2,7 @@
 
 > 更新时间：2024-3-26
 
-
 ## 站点配置
-
 
 ### 网页标题
 
@@ -13,7 +11,8 @@
 ::: tip 与 站点标题 的区别
 [站点标题](#站点标题) `title` 是固定的，每个页面都会显示
 
-网页标题 `titleTemplate` 是不固定的，它随着每个页面的 `<h1>` 标题而变动，如 标题是 `# 页面` ，那么显示的就是 `页面 | VitePress` ，除非自定义给它写死 
+网页标题 `titleTemplate` 是不固定的，它随着每个页面的 `<h1>` 标题而变动，如 标题是 `# 页面`
+，那么显示的就是 `页面 | VitePress` ，除非自定义给它写死
 :::
 
 ```ts{5}
@@ -26,10 +25,6 @@ export default defineConfig({
   // titleTemplate: false, //关闭标题
 })
 ```
-
-
-
-
 
 ### Fav图标
 
@@ -49,50 +44,45 @@ export default defineConfig({
 ::: warning 注意
 如果你使用路径 `/logo.png` 无反应，可尝试先用相对路径 `../public/logo.png`
 
-另：如果你的 [Base 设置非根目录](./assets.md#base)，fav图标路径也要做出改变
+另：如果你的 [Base 设置非根目录](../assets/index.md#base)，fav图标路径也要做出改变
 :::
 
-
-
-
 ::: details 官方配置添加谷歌字体
+
 ```ts
 export default {
-  head: [
-    [
-      'link',
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }
-      // would render:
-      //
-      // <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    ],
+    head: [
+        [
+            'link',
+            {rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: ''}
+            // would render:
+            //
+            // <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        ],
 
-    [
-      'script',
-      { id: 'register-sw' },
-      `;(() => {
+        [
+            'script',
+            {id: 'register-sw'},
+            `;(() => {
         if ('serviceWorker' in navigator) {
           navigator.serviceWorker.register('/sw.js')
         }
       })()`
-      // would render:
-      //
-      // <script id="register-sw">
-      // ;(() => {
-      //   if ('serviceWorker' in navigator) {
-      //     navigator.serviceWorker.register('/sw.js')
-      //   }
-      // })()
-      // </script>
+            // would render:
+            //
+            // <script id="register-sw">
+            // ;(() => {
+            //   if ('serviceWorker' in navigator) {
+            //     navigator.serviceWorker.register('/sw.js')
+            //   }
+            // })()
+            // </script>
+        ]
     ]
-  ]
 }
 ```
+
 :::
-
-
-
-
 
 ### 深色主题
 
@@ -107,8 +97,6 @@ export default defineConfig({
   // appearance:false, // 关闭
 })
 ```
-
-
 
 ### 多语言
 
@@ -128,7 +116,6 @@ export default defineConfig({
 │  └─ index.md      <--中文首页(默认)
 └─ package.json
 ```
-
 
 ::: tip 说明
 实际就是新建一个语言目录，再把根目录所有文档，翻译后再放进去
@@ -162,7 +149,6 @@ export default defineConfig({
 })
 ```
 
-
 ### 默认主题
 
 本文仅演示默认主题设置
@@ -174,18 +160,14 @@ export default defineConfig({
 ```ts
 export default defineConfig({
 
-  // 主题配置
-  themeConfig: {
-    logo: '',
-    nav: [...],
-    sidebar: { ... },
-  },
+    // 主题配置
+    themeConfig: {
+        logo: '',
+        nav: [...],
+        sidebar: {...},
+    },
 })
 ```
-
-
-
-
 
 ### Logo
 
@@ -202,6 +184,7 @@ export default defineConfig({
 └─ package.json
 
 ```
+
 根据目录得知logo文件的位置，在 `doc - public` 文件夹
 
 ::: tip 说明
@@ -233,8 +216,6 @@ export default defineConfig({
 })
 ```
 
-
-
 ### 站点标题
 
 如果设置后，会覆盖原本的 [网页标题](#网页标题) !
@@ -251,17 +232,12 @@ export default defineConfig({
 })
 ```
 
-
-
-
 ---
-
 
 ### 站点地图
 
-VitePress 提供开箱即用的配置，由 [sitemap](https://github.com/ekalinin/sitemap.js) 模块提供支持，为站点生成 `sitemap.xml` 文件。要启用它，请将以下内容添加到 `.vitepress/config.mts` 中
-
-
+VitePress 提供开箱即用的配置，由 [sitemap](https://github.com/ekalinin/sitemap.js) 模块提供支持，为站点生成 `sitemap.xml`
+文件。要启用它，请将以下内容添加到 `.vitepress/config.mts` 中
 
 ```ts{4-7}
 import { defineConfig } from 'vitepress'
@@ -274,16 +250,7 @@ export default defineConfig({
 })
 ```
 
-
-
-
-
-
-
-
-
 ## 导航栏
-
 
 ### 导航菜单
 
@@ -312,7 +279,6 @@ export default defineConfig({
 
 若想要下拉式菜单导航，就需要加一个 `iteams`
 
-
 ```ts{4-16}
 export default defineConfig({
 
@@ -336,7 +302,6 @@ export default defineConfig({
 ```
 
 给下拉菜单赋予分组标题，就要再次嵌套 `iteams`
-
 
 ```ts{4-38}
 export default defineConfig({
@@ -399,11 +364,9 @@ export default defineConfig({
 })
 ```
 
-
 ### 社交链接
 
 可以自行添加，支持SVG
-
 
 ```ts{4-9}
 export default defineConfig({
@@ -443,13 +406,19 @@ export type SocialLinkIcon =
 我这里使用阿里旗下的 [iconfont](https://www.iconfont.cn/)，搜索 `微信` 找到合适的下载 `复制svg代码`
 
 ::: tip 说明
-其他图标网站：[xicons·需翻墙打开](https://www.xicons.org/#/zh-CN)、字节跳动旗下的 [iconpark](https://iconpark.oceanengine.com/official)
+其他图标网站：[xicons·需翻墙打开](https://www.xicons.org/#/zh-CN)
+、字节跳动旗下的 [iconpark](https://iconpark.oceanengine.com/official)
 :::
 
 我这里使用的是这个
 
 ```html
-<svg t="1703483542872" class="icon" viewBox="0 0 1309 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6274" width="200" height="200"><path d="M1147.26896 912.681417l34.90165 111.318583-127.165111-66.823891a604.787313 604.787313 0 0 1-139.082747 22.263717c-220.607239 0-394.296969-144.615936-394.296969-322.758409s173.526026-322.889372 394.296969-322.889372C1124.219465 333.661082 1309.630388 478.669907 1309.630388 656.550454c0 100.284947-69.344929 189.143369-162.361428 256.130963zM788.070086 511.869037a49.11114 49.11114 0 0 0-46.360916 44.494692 48.783732 48.783732 0 0 0 46.360916 44.494693 52.090549 52.090549 0 0 0 57.983885-44.494693 52.385216 52.385216 0 0 0-57.983885-44.494692z m254.985036 0a48.881954 48.881954 0 0 0-46.09899 44.494692 48.620028 48.620028 0 0 0 46.09899 44.494693 52.385216 52.385216 0 0 0 57.983886-44.494693 52.58166 52.58166 0 0 0-57.951145-44.494692z m-550.568615 150.018161a318.567592 318.567592 0 0 0 14.307712 93.212943c-14.307712 1.080445-28.746387 1.768001-43.283284 1.768001a827.293516 827.293516 0 0 1-162.394168-22.296458l-162.001279 77.955749 46.328175-133.811485C69.410411 600.858422 0 500.507993 0 378.38496 0 166.683208 208.689602 0 463.510935 0c227.908428 0 427.594322 133.18941 467.701752 312.379588a427.463358 427.463358 0 0 0-44.625655-2.619261c-220.24709 0-394.100524 157.74498-394.100525 352.126871zM312.90344 189.143369a64.270111 64.270111 0 0 0-69.803299 55.659291 64.532037 64.532037 0 0 0 69.803299 55.659292 53.694846 53.694846 0 0 0 57.852923-55.659292 53.465661 53.465661 0 0 0-57.852923-55.659291z m324.428188 0a64.040926 64.040926 0 0 0-69.574114 55.659291 64.302852 64.302852 0 0 0 69.574114 55.659292 53.694846 53.694846 0 0 0 57.951145-55.659292 53.465661 53.465661 0 0 0-57.951145-55.659291z" p-id="6275"></path></svg>
+
+<svg t="1703483542872" class="icon" viewBox="0 0 1309 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6274"
+     width="200" height="200">
+    <path d="M1147.26896 912.681417l34.90165 111.318583-127.165111-66.823891a604.787313 604.787313 0 0 1-139.082747 22.263717c-220.607239 0-394.296969-144.615936-394.296969-322.758409s173.526026-322.889372 394.296969-322.889372C1124.219465 333.661082 1309.630388 478.669907 1309.630388 656.550454c0 100.284947-69.344929 189.143369-162.361428 256.130963zM788.070086 511.869037a49.11114 49.11114 0 0 0-46.360916 44.494692 48.783732 48.783732 0 0 0 46.360916 44.494693 52.090549 52.090549 0 0 0 57.983885-44.494693 52.385216 52.385216 0 0 0-57.983885-44.494692z m254.985036 0a48.881954 48.881954 0 0 0-46.09899 44.494692 48.620028 48.620028 0 0 0 46.09899 44.494693 52.385216 52.385216 0 0 0 57.983886-44.494693 52.58166 52.58166 0 0 0-57.951145-44.494692z m-550.568615 150.018161a318.567592 318.567592 0 0 0 14.307712 93.212943c-14.307712 1.080445-28.746387 1.768001-43.283284 1.768001a827.293516 827.293516 0 0 1-162.394168-22.296458l-162.001279 77.955749 46.328175-133.811485C69.410411 600.858422 0 500.507993 0 378.38496 0 166.683208 208.689602 0 463.510935 0c227.908428 0 427.594322 133.18941 467.701752 312.379588a427.463358 427.463358 0 0 0-44.625655-2.619261c-220.24709 0-394.100524 157.74498-394.100525 352.126871zM312.90344 189.143369a64.270111 64.270111 0 0 0-69.803299 55.659291 64.532037 64.532037 0 0 0 69.803299 55.659292 53.694846 53.694846 0 0 0 57.852923-55.659292 53.465661 53.465661 0 0 0-57.852923-55.659291z m324.428188 0a64.040926 64.040926 0 0 0-69.574114 55.659291 64.302852 64.302852 0 0 0 69.574114 55.659292 53.694846 53.694846 0 0 0 57.951145-55.659292 53.465661 53.465661 0 0 0-57.951145-55.659291z"
+          p-id="6275"></path>
+</svg>
 ```
 
 粘贴到 `config.mts` 配置文件中
@@ -480,8 +449,6 @@ export default defineConfig({
 自己搭一个，界面也很美观
 :::
 
-
-
 ### 深浅模式文字
 
 手机端默认显示 `Appearance` ，你也可以自定义显示文字
@@ -497,20 +464,14 @@ export default defineConfig({
 })
 ```
 
-
-
-
-
 ## 搜索框
 
-
-本地的 [minisearch](https://github.com/lucaong/minisearch/) 和 [Algolia DocSearch](https://docsearch.algolia.com/) 都是全局搜索都好用
-
+本地的 [minisearch](https://github.com/lucaong/minisearch/) 和 [Algolia DocSearch](https://docsearch.algolia.com/)
+都是全局搜索都好用
 
 ### 本地搜索
 
 得益于 [minisearch](https://github.com/lucaong/minisearch/)，VitePress 支持使用浏览器内索引进行模糊全文搜索
-
 
 ```ts{4-8}
 export default defineConfig({
@@ -524,7 +485,6 @@ export default defineConfig({
 
 })
 ```
-
 
 如果你搭建了多语言站点，可以更细致的配置搜索
 
@@ -561,9 +521,6 @@ export default defineConfig({
 })
 ```
 
-
-
-
 ### Algolia
 
 [Algolia DocSearch](https://docsearch.algolia.com/) 要么自行申请，要么自行搭建
@@ -571,7 +528,6 @@ export default defineConfig({
 * [官方申请：查看我之前搭建 VuePress 时写的教程](https://vuepress.yiov.top/guide/docsearch.html#%E5%AE%98%E6%96%B9%E7%94%B3%E8%AF%B7-%E9%80%89%E5%85%B6%E4%B8%80)
 
 * [自建爬虫：查看我之前搭建 VuePress 时写的教程](https://vuepress.yiov.top/guide/docsearch.html#%E8%87%AA%E5%BB%BA%E7%88%AC%E8%99%AB-%E9%80%89%E5%85%B6%E4%B8%80)
-
 
 我们先看一下 VitePress 里的配置
 
@@ -592,7 +548,6 @@ export default defineConfig({
 
 })
 ```
-
 
 多语言配置
 
@@ -661,165 +616,153 @@ export default defineConfig({
 
 ```ts
 new Crawler({
-  appId: '...',
-  apiKey: '...',
-  rateLimit: 8,
-  startUrls: ['https://vitepress.dev/'],
-  renderJavaScript: false,
-  sitemaps: [],
-  exclusionPatterns: [],
-  ignoreCanonicalTo: false,
-  discoveryPatterns: ['https://vitepress.dev/**'],
-  schedule: 'at 05:10 on Saturday',
-  actions: [
-    {
-      indexName: 'vitepress',
-      pathsToMatch: ['https://vitepress.dev/**'],
-      recordExtractor: ({ $, helpers }) => {
-        return helpers.docsearch({
-          recordProps: {
-            lvl1: '.content h1',
-            content: '.content p, .content li',
-            lvl0: {
-              selectors: '',
-              defaultValue: 'Documentation'
-            },
-            lvl2: '.content h2',
-            lvl3: '.content h3',
-            lvl4: '.content h4',
-            lvl5: '.content h5'
-          },
-          indexHeadings: true
-        })
-      }
+    appId: '...',
+    apiKey: '...',
+    rateLimit: 8,
+    startUrls: ['https://vitepress.dev/'],
+    renderJavaScript: false,
+    sitemaps: [],
+    exclusionPatterns: [],
+    ignoreCanonicalTo: false,
+    discoveryPatterns: ['https://vitepress.dev/**'],
+    schedule: 'at 05:10 on Saturday',
+    actions: [
+        {
+            indexName: 'vitepress',
+            pathsToMatch: ['https://vitepress.dev/**'],
+            recordExtractor: ({$, helpers}) => {
+                return helpers.docsearch({
+                    recordProps: {
+                        lvl1: '.content h1',
+                        content: '.content p, .content li',
+                        lvl0: {
+                            selectors: '',
+                            defaultValue: 'Documentation'
+                        },
+                        lvl2: '.content h2',
+                        lvl3: '.content h3',
+                        lvl4: '.content h4',
+                        lvl5: '.content h5'
+                    },
+                    indexHeadings: true
+                })
+            }
+        }
+    ],
+    initialIndexSettings: {
+        vitepress: {
+            attributesForFaceting: ['type', 'lang'],
+            attributesToRetrieve: ['hierarchy', 'content', 'anchor', 'url'],
+            attributesToHighlight: ['hierarchy', 'hierarchy_camel', 'content'],
+            attributesToSnippet: ['content:10'],
+            camelCaseAttributes: ['hierarchy', 'hierarchy_radio', 'content'],
+            searchableAttributes: [
+                'unordered(hierarchy_radio_camel.lvl0)',
+                'unordered(hierarchy_radio.lvl0)',
+                'unordered(hierarchy_radio_camel.lvl1)',
+                'unordered(hierarchy_radio.lvl1)',
+                'unordered(hierarchy_radio_camel.lvl2)',
+                'unordered(hierarchy_radio.lvl2)',
+                'unordered(hierarchy_radio_camel.lvl3)',
+                'unordered(hierarchy_radio.lvl3)',
+                'unordered(hierarchy_radio_camel.lvl4)',
+                'unordered(hierarchy_radio.lvl4)',
+                'unordered(hierarchy_radio_camel.lvl5)',
+                'unordered(hierarchy_radio.lvl5)',
+                'unordered(hierarchy_radio_camel.lvl6)',
+                'unordered(hierarchy_radio.lvl6)',
+                'unordered(hierarchy_camel.lvl0)',
+                'unordered(hierarchy.lvl0)',
+                'unordered(hierarchy_camel.lvl1)',
+                'unordered(hierarchy.lvl1)',
+                'unordered(hierarchy_camel.lvl2)',
+                'unordered(hierarchy.lvl2)',
+                'unordered(hierarchy_camel.lvl3)',
+                'unordered(hierarchy.lvl3)',
+                'unordered(hierarchy_camel.lvl4)',
+                'unordered(hierarchy.lvl4)',
+                'unordered(hierarchy_camel.lvl5)',
+                'unordered(hierarchy.lvl5)',
+                'unordered(hierarchy_camel.lvl6)',
+                'unordered(hierarchy.lvl6)',
+                'content'
+            ],
+            distinct: true,
+            attributeForDistinct: 'url',
+            customRanking: [
+                'desc(weight.pageRank)',
+                'desc(weight.level)',
+                'asc(weight.position)'
+            ],
+            ranking: [
+                'words',
+                'filters',
+                'typo',
+                'attribute',
+                'proximity',
+                'exact',
+                'custom'
+            ],
+            highlightPreTag: '<span class="algolia-docsearch-suggestion--highlight">',
+            highlightPostTag: '</span>',
+            minWordSizefor1Typo: 3,
+            minWordSizefor2Typos: 7,
+            allowTyposOnNumericTokens: false,
+            minProximity: 1,
+            ignorePlurals: true,
+            advancedSyntax: true,
+            attributeCriteriaComputedByMinProximity: true,
+            removeWordsIfNoResults: 'allOptional'
+        }
     }
-  ],
-  initialIndexSettings: {
-    vitepress: {
-      attributesForFaceting: ['type', 'lang'],
-      attributesToRetrieve: ['hierarchy', 'content', 'anchor', 'url'],
-      attributesToHighlight: ['hierarchy', 'hierarchy_camel', 'content'],
-      attributesToSnippet: ['content:10'],
-      camelCaseAttributes: ['hierarchy', 'hierarchy_radio', 'content'],
-      searchableAttributes: [
-        'unordered(hierarchy_radio_camel.lvl0)',
-        'unordered(hierarchy_radio.lvl0)',
-        'unordered(hierarchy_radio_camel.lvl1)',
-        'unordered(hierarchy_radio.lvl1)',
-        'unordered(hierarchy_radio_camel.lvl2)',
-        'unordered(hierarchy_radio.lvl2)',
-        'unordered(hierarchy_radio_camel.lvl3)',
-        'unordered(hierarchy_radio.lvl3)',
-        'unordered(hierarchy_radio_camel.lvl4)',
-        'unordered(hierarchy_radio.lvl4)',
-        'unordered(hierarchy_radio_camel.lvl5)',
-        'unordered(hierarchy_radio.lvl5)',
-        'unordered(hierarchy_radio_camel.lvl6)',
-        'unordered(hierarchy_radio.lvl6)',
-        'unordered(hierarchy_camel.lvl0)',
-        'unordered(hierarchy.lvl0)',
-        'unordered(hierarchy_camel.lvl1)',
-        'unordered(hierarchy.lvl1)',
-        'unordered(hierarchy_camel.lvl2)',
-        'unordered(hierarchy.lvl2)',
-        'unordered(hierarchy_camel.lvl3)',
-        'unordered(hierarchy.lvl3)',
-        'unordered(hierarchy_camel.lvl4)',
-        'unordered(hierarchy.lvl4)',
-        'unordered(hierarchy_camel.lvl5)',
-        'unordered(hierarchy.lvl5)',
-        'unordered(hierarchy_camel.lvl6)',
-        'unordered(hierarchy.lvl6)',
-        'content'
-      ],
-      distinct: true,
-      attributeForDistinct: 'url',
-      customRanking: [
-        'desc(weight.pageRank)',
-        'desc(weight.level)',
-        'asc(weight.position)'
-      ],
-      ranking: [
-        'words',
-        'filters',
-        'typo',
-        'attribute',
-        'proximity',
-        'exact',
-        'custom'
-      ],
-      highlightPreTag: '<span class="algolia-docsearch-suggestion--highlight">',
-      highlightPostTag: '</span>',
-      minWordSizefor1Typo: 3,
-      minWordSizefor2Typos: 7,
-      allowTyposOnNumericTokens: false,
-      minProximity: 1,
-      ignorePlurals: true,
-      advancedSyntax: true,
-      attributeCriteriaComputedByMinProximity: true,
-      removeWordsIfNoResults: 'allOptional'
-    }
-  }
 })
 ```
-
-
-
-
 
 自建爬虫配置
 
 ```json
 {
-    "index_name": "你的索引名",
-    "start_urls": [
-        {
-            "url": "https://你的网站",
-            "selectors_key": ""
-        }
-    ],
-    "stop_urls": [],
-    "selectors": {
-        "default": {
-            "lvl0": {
-                "selector": "",
-                "default_value": "我的文档"
-            },
-            "lvl1": ".content h1",
-            "lvl2": ".content h2",
-            "lvl3": ".content h3",
-            "lvl4": ".content h4",
-            "lvl5": ".content h5",
-            "lvl6": ".content h6",
-            "text": ".content p, .content li",
-            "lang": {
-                "selector": "/html/@lang",
-                "type": "xpath",
-                "global": true
-            }
-        }
-    },
-    "custom_settings": {
-        "attributesForFaceting": [
-            "lang"
-        ]
+  "index_name": "你的索引名",
+  "start_urls": [
+    {
+      "url": "https://你的网站",
+      "selectors_key": ""
     }
+  ],
+  "stop_urls": [],
+  "selectors": {
+    "default": {
+      "lvl0": {
+        "selector": "",
+        "default_value": "我的文档"
+      },
+      "lvl1": ".content h1",
+      "lvl2": ".content h2",
+      "lvl3": ".content h3",
+      "lvl4": ".content h4",
+      "lvl5": ".content h5",
+      "lvl6": ".content h6",
+      "text": ".content p, .content li",
+      "lang": {
+        "selector": "/html/@lang",
+        "type": "xpath",
+        "global": true
+      }
+    }
+  },
+  "custom_settings": {
+    "attributesForFaceting": [
+      "lang"
+    ]
+  }
 }
 ```
 
-
-
-
-
-
 ## 首页
 
-我们使用 [Frontmatter](./frontmatter.md) ，在 `index.md` 中进行配置和修改
-
-
+我们使用 [Frontmatter](../frontmatter/index.md) ，在 `index.md` 中进行配置和修改
 
 ## 页脚
-
 
 ```ts{4-8}
 export default defineConfig({
@@ -834,7 +777,6 @@ export default defineConfig({
 
 })
 ```
-
 
 如果你有备案，会需要跳转到工信部，使用html代码就行了
 
@@ -851,9 +793,6 @@ export default defineConfig({
 
 })
 ```
-
-
-
 
 ## 侧边栏
 
@@ -887,7 +826,6 @@ export default defineConfig({
 
 })
 ```
-
 
 当然我们也可以进行多个分组
 
@@ -928,9 +866,7 @@ export default defineConfig({
 })
 ```
 
-
 多个侧边栏也是可以的，有其他目录可以参考官方的目录表样式
-
 
 ```
 .
@@ -945,7 +881,6 @@ export default defineConfig({
 ```
 
 那么我们的配置就是
-
 
 ```ts{4-31}
 export default defineConfig({
@@ -988,7 +923,6 @@ export default defineConfig({
 如果你不想开启，将它设为 `true` ，或者直接不配置
 :::
 
-
 ```ts{4-31}
 export default defineConfig({
 
@@ -1006,11 +940,9 @@ export default defineConfig({
 })
 ```
 
-
 ### 侧边栏(移动端)
 
 更改手机端菜单文字显示，默认 `Menu`
-
 
 ```ts{4-5}
 export default defineConfig({
@@ -1038,7 +970,6 @@ export default defineConfig({
 })
 ```
 
-
 ### 大纲
 
 右侧的大纲，默认显示是二级标题，通过设置 `outline` 实现多级标题
@@ -1059,13 +990,10 @@ export default defineConfig({
 })
 ```
 
-
-
-
 ## 编辑本页
 
 ::: warning 注意
-会被 [Frontmatter配置](./frontmatter.md#编辑本页) 覆盖
+会被 [Frontmatter配置](../frontmatter/index.md#编辑本页) 覆盖
 :::
 
 ```ts{4-8}
@@ -1081,9 +1009,6 @@ export default defineConfig({
 
 })
 ```
-
-
-
 
 ## 上次更新
 
@@ -1108,10 +1033,9 @@ export default defineConfig({
 })
 ```
 
-
 ## 上/下页
 
-默认从侧边栏配置中读取，如果想单独关闭或自定义请参照 [Frontmatter](./frontmatter.md#上-下页)
+默认从侧边栏配置中读取，如果想单独关闭或自定义请参照 [Frontmatter](../frontmatter/index.md#上-下页)
 
 ::: tip 说明
 仅修改显示的文字
@@ -1120,7 +1044,6 @@ export default defineConfig({
 
 `Proxima pagina` 可以改成 下一页
 :::
-
 
 ```ts{4-8}
 export default defineConfig({
@@ -1135,8 +1058,6 @@ export default defineConfig({
 
 })
 ```
-
-
 
 ## 广告
 
