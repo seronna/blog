@@ -20,12 +20,29 @@ export default defineConfig({
                 link: '/nav/'
             },
             {
-                text: "学习路线", link: '/study/'
-            },
-            {
-                text: 'Java', items: [
-                    {text: 'Java基础', link: '/java/base/'},
-                    {text: 'Java进阶', link: '/java/advanced/'},
+                text: '后端', items: [
+                    {
+                        text: '学习路线', link: '/study/'
+                    },
+                    {
+                        text: 'Java',
+                        items: [
+                            {text: 'Java基础', link: '/back-end/java/'},
+                        ]
+                    },
+                    {
+                        text: 'C语言',
+                        items: [
+                            {text: 'C语言基础', link: '/back-end/c/'},
+                        ]
+                    },
+                    {
+                        text: '中间件',
+                        items: [
+                            {text: 'Redis', link: '/back-end/redis/'},
+                            {text: 'RabbitMQ', link: '/back-end/rabbitmq/'},
+                        ]
+                    }
                 ]
             },
             {
@@ -57,6 +74,14 @@ export default defineConfig({
                             {text: '静态部署', link: '/doc-build/assets/'},
                         ],
                     },
+                ]
+            },
+            {
+                text: "其他",
+                items: [
+                    {text: 'Bug万象集', link: '/others/bug/'},
+                    {text: '工具四海谈', link: '/others/tools/'},
+                    {text: '方案春秋志', link: '/others/option/'},
                 ]
             },
             {
