@@ -95,6 +95,12 @@ export default defineConfig({
         ],
         // sidebar: { "/front-end/react": set_sidebar("front-end/react") },
         sidebar: {
+            "/back-end/c": [
+                { text: 'C语言入门', link: '/back-end/c/'},
+                { text: '变量与进制', link: '/back-end/c/第02章_变量与进制.md'},
+                { text: '运算符与流程控制', link: '/back-end/c/第03章_运算符与流程控制.md'},
+                { text: '指针', link: '/back-end/c/第05章_指针(重点).md'},
+            ],
             // "/docs/study/": set_sidebar("/docs/study/java"),
             "/doc-build/": [
                 {
