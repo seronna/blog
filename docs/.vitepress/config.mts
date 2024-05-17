@@ -33,7 +33,7 @@ export default defineConfig({
                     {
                         text: 'C语言',
                         items: [
-                            {text: 'C语言基础', link: '/back-end/c/'},
+                            {text: 'C语言笔记', link: '/back-end/c/'},
                         ]
                     },
                     {
@@ -101,6 +101,9 @@ export default defineConfig({
                 { text: '运算符与流程控制', link: '/back-end/c/第03章_运算符与流程控制.md'},
                 { text: '指针', link: '/back-end/c/第05章_指针(重点).md'},
                 { text: '函数', link: '/back-end/c/第06章_函数.md'},
+                { text: '结构体与共用体', link: '/back-end/c/第07章_结构体与共用体.md'},
+                { text: 'C语言常用函数', link: '/back-end/c/第08章_C语言常用函数.md'},
+                { text: '文章操作', link: '/back-end/c/第09章_文件操作.md'}
             ],
             // "/docs/study/": set_sidebar("/docs/study/java"),
             "/doc-build/": [
