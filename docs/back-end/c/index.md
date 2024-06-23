@@ -709,41 +709,41 @@ printf(格式控制字符串,输出列表);
 
 printf() 的占位符有许多种类，与 C 语言的数据类型相对应。
 
-下面按照字母顺序，列出占位符如下，方便查阅(红色为常用的)：
-
-> %a ：浮点数(仅C99有效)
-> %A ：浮点数(仅C99有效)
-> **%c ：char型数据**
-> **%d ：十进制整数(int)**
-> %e ：使用科学计数法的浮点数，指数部分的 e 为小写
-> %E ：使用科学计数法的浮点数，指数部分的 E 为大写
-> %i ：整数，基本等同于 %d
-> **%f ：浮点数(float)**
-> %g ：6个有效数字的浮点数。整数部分一旦超过6位，就会自动转为科学计数法，指数部分的 e 为小写
-> %G ：等同于 %g ，唯一的区别是指数部分的 E 为大写
-> %hd ：十进制 short int 类型
-> %ho ：八进制 short int 类型
-> %hx ：十六进制 short int 类型
-> %hu ：unsigned short int 类型
-> **%ld ：十进制整数(long)**
-> %lo ：八进制 long int 类型
-> %lx ：十六进制 long int 类型
-> %lu ：unsigned long int 类型
-> %lld ：十进制 long long int 类型
-> %llo ：八进制 long long int 类型
-> %llx ：十六进制 long long int 类型
-> %llu ：unsigned long long int 类型
-> %le ：科学计数法表示的 long double 类型浮点数
-> **%lf ：十进制浮点数(double)**
-> %n ：已输出的字符串数量。该占位符本身不输出，只将值存储在指定变量之中
-> %o ：八进制整数
-> **%p ：指针**
-> **%s ：字符串**
-> **%u ：十进制无符号整数（unsigned int）**
-> %x ：十六进制整数
-> %zd ： size_t 类型
-> %% ：输出一个百分号
-
+下面按照字母顺序，列出占位符如下，方便查阅(高亮为常用的)：
+```text{3,4,8,15,24,27,28,29}
+%a ：浮点数(仅C99有效)
+%A ：浮点数(仅C99有效)
+%c ：char型数据
+%d ：十进制整数(int)
+%e ：使用科学计数法的浮点数，指数部分的 e 为小写
+%E ：使用科学计数法的浮点数，指数部分的 E 为大写
+%i ：整数，基本等同于 %d
+%f ：浮点数(float)
+%g ：6个有效数字的浮点数。整数部分一旦超过6位，就会自动转为科学计数法，指数部分的 e 为小写
+%G ：等同于 %g ，唯一的区别是指数部分的 E 为大写
+%hd ：十进制 short int 类型
+%ho ：八进制 short int 类型
+%hx ：十六进制 short int 类型
+%hu ：unsigned short int 类型
+%ld ：十进制整数(long)
+%lo ：八进制 long int 类型
+%lx ：十六进制 long int 类型
+%lu ：unsigned long int 类型
+%lld ：十进制 long long int 类型
+%llo ：八进制 long long int 类型
+%llx ：十六进制 long long int 类型
+%llu ：unsigned long long int 类型
+%le ：科学计数法表示的 long double 类型浮点数
+%lf ：十进制浮点数(double)
+%n ：已输出的字符串数量。该占位符本身不输出，只将值存储在指定变量之中
+%o ：八进制整数
+%p ：指针
+%s ：字符串
+%u ：十进制无符号整数（unsigned int）
+%x ：十六进制整数
+%zd ： size_t 类型
+%% ：输出一个百分号
+```
 ### 7.3 举例
 
 **举例1：%d**

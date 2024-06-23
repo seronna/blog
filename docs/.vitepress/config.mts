@@ -28,6 +28,7 @@ export default defineConfig({
                         text: 'Java',
                         items: [
                             {text: 'Java基础', link: '/back-end/java/'},
+                            {text: '设计模式', link: '/back-end/java/design-pattern.md'}
                         ]
                     },
                     {
