@@ -85,10 +85,10 @@ export const NAV_DATA: NavData[] = [
                 link: 'https://vant-ui.github.io/vant'
             },
             {
-                icon: 'https://webapp.didistatic.com/static/webapp/shield/Cube-UI_logo.ico',
-                title: 'Cube UI',
-                desc: '基于 Vue.js 实现的精致移动端组件库',
-                link: 'https://didi.github.io/cube-ui'
+              icon:"https://sf16-scmcdn-sg.ibytedtos.com/obj/static-sg/visactor-site/output/sg/img/favicon.png",
+              title: 'VChart',
+              desc:'字节跳动开源的开箱即用的多端图表库',
+              link: 'https://visactor.io/vchart'
             }
         ]
     },
@@ -145,5 +145,16 @@ export const NAV_DATA: NavData[] = [
                 link: 'https://juejin.cn'
             }
         ]
-    }
+    },
+    {
+        title:'运维',
+        items:[
+            {
+                icon:'https://1panel.cn/img/favicon.png',
+                title: '1Panel',
+                desc:'新一代的 Linux 服务器运维管理面板',
+                link: 'https://1panel.cn/'
+            }
+        ]
+    },
 ]
