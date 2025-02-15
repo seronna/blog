@@ -7,8 +7,8 @@ export default defineConfig({
     // 参考issues https://github.com/vuejs/vitepress/issues/3513
     // 如不设置域名则为 base: '/blog/'
     base: '/',
-    title: "图南的编程笔记",
-    description: "图南的编程笔记",
+    title: "Soren的编程笔记",
+    description: "Soren的编程笔记",
     lastUpdated: true,
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
@@ -50,14 +50,12 @@ export default defineConfig({
                 text: "文档搭建",
                 items: [
                     {
-                        // 分组标题1
                         text: '介绍',
                         items: [
                             {text: '前言', link: '/doc-build/preface/'},
                         ],
                     },
                     {
-                        // 分组标题2
                         text: '基础设置',
                         items: [
                             {text: '快速上手', link: '/doc-build/getting-started/'},
@@ -67,7 +65,6 @@ export default defineConfig({
                         ],
                     },
                     {
-                        // 分组标题3
                         text: '进阶玩法',
                         items: [
                             {text: 'markdown', link: '/doc-build/markdown/'},
@@ -77,14 +74,14 @@ export default defineConfig({
                     },
                 ]
             },
-            {
-                text: "其他",
-                items: [
-                    {text: 'Bug万象集', link: '/others/bug/'},
-                    {text: '工具四海谈', link: '/others/tools/'},
-                    {text: '方案春秋志', link: '/others/option/'},
-                ]
-            },
+            // {
+            //     text: "其他",
+            //     items: [
+            //         {text: 'Bug万象集', link: '/others/bug/'},
+            //         {text: '工具四海谈', link: '/others/tools/'},
+            //         {text: '方案春秋志', link: '/others/option/'},
+            //     ]
+            // },
             {
                 text: "关于",
                 link: '/about/'
@@ -94,7 +91,6 @@ export default defineConfig({
             // {text: '项目', link: '/project/'},
             // {text: 'gitee', link: 'https://gitee.com/xia-haike'}
         ],
-        // sidebar: { "/front-end/react": set_sidebar("front-end/react") },
         sidebar: {
             "/back-end/c": [
                 { text: 'C语言入门', link: '/back-end/c/'},
@@ -106,7 +102,6 @@ export default defineConfig({
                 { text: 'C语言常用函数', link: '/back-end/c/第08章_C语言常用函数.md'},
                 { text: '文章操作', link: '/back-end/c/第09章_文件操作.md'}
             ],
-            // "/docs/study/": set_sidebar("/docs/study/java"),
             "/doc-build/": [
                 {
                     text: '介绍',
@@ -115,7 +110,6 @@ export default defineConfig({
                     ]
                 },
                 {
-                    // 分组标题2
                     text: '基础设置',
                     collapsed: false,
                     items: [
@@ -126,7 +120,6 @@ export default defineConfig({
                     ],
                 },
                 {
-                    // 分组标题3
                     text: '进阶玩法',
                     collapsed: false,
                     items: [
@@ -136,7 +129,6 @@ export default defineConfig({
                     ],
                 },
             ],
-            // "/doc-build/": set_sidebar("/docs/doc-build/"),
         },
         socialLinks: [
             {

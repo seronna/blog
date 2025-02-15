@@ -11,6 +11,11 @@ export const NAV_DATA: NavData[] = [
                 link: 'https://chat.openai.com/chat'
             },
             {
+                icon: 'https://chat.deepseek.com/deepseek-chat.jpeg',
+                title: 'DeepSeek',
+                link: 'https://chat.deepseek.com/'
+            },
+            {
                 icon: '/icons/gemini.png',
                 title: "Gemini",
                 link: "https://gemini.google.com/app",
@@ -157,4 +162,20 @@ export const NAV_DATA: NavData[] = [
             }
         ]
     },
+   {
+       title:'文档',
+       items:[
+       {
+           icon:'https://saduck.top/favicon.png',
+           title: 'saduck',
+           desc:'一个免费的考公考编知识网站，包含行测、申论、公基、词语查询、行测助手、备考资料。',
+           link: 'https://saduck.top/'
+       },
+       {
+           title: 'nodejs文档',
+           desc:'Node.js v22.13.0 文档',
+           link: 'https://nodejs.cn/api/v22/'
+       },
+   ]
+   }
 ]
