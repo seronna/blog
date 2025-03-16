@@ -14,7 +14,7 @@ export default defineConfig({
         // https://vitepress.dev/reference/default-theme-config
         logo: "/clover.svg",
         nav: [
-            {text: 'Home', link: '/'},
+            {text: '主页', link: '/'},
             {
                 text: "导航",
                 link: '/nav/'
@@ -24,26 +24,26 @@ export default defineConfig({
                     {
                         text: '学习路线', link: '/study/'
                     },
-                    {
-                        text: 'Java',
-                        items: [
-                            {text: 'Java基础', link: '/back-end/java/'},
-                            {text: '设计模式', link: '/back-end/java/design-pattern.md'}
-                        ]
-                    },
+                    // {
+                    //     text: 'Java',
+                    //     items: [
+                    //         {text: 'Java基础', link: '/back-end/java/'},
+                    //         {text: '设计模式', link: '/back-end/java/design-pattern.md'}
+                    //     ]
+                    // },
                     {
                         text: 'C语言',
                         items: [
                             {text: 'C语言笔记', link: '/back-end/c/'},
                         ]
                     },
-                    {
-                        text: '中间件',
-                        items: [
-                            {text: 'Redis', link: '/back-end/redis/'},
-                            {text: 'RabbitMQ', link: '/back-end/rabbitmq/'},
-                        ]
-                    }
+                    // {
+                    //     text: '中间件',
+                    //     items: [
+                    //         {text: 'Redis', link: '/back-end/redis/'},
+                    //         {text: 'RabbitMQ', link: '/back-end/rabbitmq/'},
+                    //     ]
+                    // }
                 ]
             },
             {
@@ -74,22 +74,10 @@ export default defineConfig({
                     },
                 ]
             },
-            // {
-            //     text: "其他",
-            //     items: [
-            //         {text: 'Bug万象集', link: '/others/bug/'},
-            //         {text: '工具四海谈', link: '/others/tools/'},
-            //         {text: '方案春秋志', link: '/others/option/'},
-            //     ]
-            // },
             {
                 text: "关于",
                 link: '/about/'
             }
-            // {text: '算法', link: '/algorithm/'},
-            // {text: '工具&部署', link: '/tools/'},
-            // {text: '项目', link: '/project/'},
-            // {text: 'gitee', link: 'https://gitee.com/xia-haike'}
         ],
         sidebar: {
             "/back-end/c": [

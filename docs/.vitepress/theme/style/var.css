@@ -10,18 +10,6 @@
     --vp-c-brand-2: #30a46c;
     --vp-c-brand-3: #298459;
 }
-
-/* 以前的vp-c-brand已弃用 */
-
-
-/*h1 {*/
-/*    background: -webkit-linear-gradient(-45deg, #e43498 5%, #5ad7dd 15%);*/
-/*    background-clip: text;*/
-/*    -webkit-background-clip: text;*/
-/*    -webkit-text-fill-color: transparent;*/
-/*}*/
-
-
 .vp-doc a {
     text-decoration: none;
 }
