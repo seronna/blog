@@ -177,5 +177,16 @@ export const NAV_DATA: NavData[] = [
            link: 'https://nodejs.cn/api/v22/'
        },
    ]
+   },
+   {
+       title:'常用工具',
+       items:[
+           {
+                  icon:'',
+                  title:'Javascript Playground',
+                  desc:'网页版在线 JavaScript 运行器，还提供前端学习教程，以实际演练的形式。',
+                  link: 'https://playcode.io/'
+           }
+       ]
    }
 ]

@@ -21,9 +21,9 @@ export default defineConfig({
             },
             {
                 text: '后端', items: [
-                    {
-                        text: '学习路线', link: '/study/'
-                    },
+                    // {
+                    //     text: '学习路线', link: '/study/'
+                    // },
                     // {
                     //     text: 'Java',
                     //     items: [
