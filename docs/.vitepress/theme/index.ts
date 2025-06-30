@@ -3,17 +3,17 @@ import {h} from 'vue'
 import type {Theme} from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
-// @ts-ignore
 import Comment from "./Comment.vue";
-// @ts-ignore
-import siteList from "./components/siteList.vue";
 import './style/index.css'
+
+// 游览量配置
+import { inBrowser } from 'vitepress'
+import busuanzi from 'busuanzi.pure.js'
+import DataPanel from "./components/DataPanel.vue"
 
 // 导航配置
 import {useData} from 'vitepress'
-// @ts-ignore
 import NavLink from './components/NavLink.vue'
-// @ts-ignore
 import NavLinks from './components/NavLinks.vue'
 
 export default {
@@ -33,8 +33,14 @@ export default {
         })
     },
     enhanceApp({app, router, siteData}) {
-        app.component("SiteList", siteList)
         app.component("NavLink", NavLink)
         app.component("MNavLinks", NavLinks)
+        // 添加网站访问量
+        app.component('DataPanel' , DataPanel)
+        if (inBrowser) {
+            router.onAfterRouteChanged = () => {
+                busuanzi.fetch()
+            }
+        }
     }
 } satisfies Theme
