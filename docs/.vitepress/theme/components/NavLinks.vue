@@ -1,19 +1,19 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { slugify } from '@mdit-vue/shared'
+import { computed } from "vue";
+import { slugify } from "@mdit-vue/shared";
 
-import MNavLink from './NavLink.vue'
-import type { NavLink } from '../untils/types'
+import MNavLink from "./NavLink.vue";
+import type { NavLink } from "../untils/types";
 
 const props = defineProps<{
-  title: string
-  noIcon?: boolean
-  items: NavLink[]
-}>()
+  title: string;
+  noIcon?: boolean;
+  items: NavLink[];
+}>();
 
 const formatTitle = computed(() => {
-  return slugify(props.title)
-})
+  return slugify(props.title);
+});
 </script>
 
 <template>
@@ -38,7 +38,10 @@ const formatTitle = computed(() => {
   margin-top: var(--m-nav-gap);
 }
 
-@each $media, $size in (500px: 140px, 640px: 155px, 768px: 175px, 960px: 200px, 1440px: 240px) {
+@each $media,
+  $size
+    in (500px: 140px, 640px: 155px, 768px: 175px, 960px: 200px, 1440px: 240px)
+{
   @media (min-width: $media) {
     .m-nav-links {
       grid-template-columns: repeat(auto-fill, minmax($size, 1fr));

@@ -6,11 +6,6 @@ import "./style.css";
 import Comment from "./Comment.vue";
 import "./style/index.css";
 
-// 游览量配置
-import { inBrowser } from "vitepress";
-import busuanzi from "busuanzi.pure.js";
-import DataPanel from "./components/DataPanel.vue";
-
 // 导航配置
 import { useData } from "vitepress";
 import NavLink from "./components/NavLink.vue";
@@ -26,13 +21,14 @@ export default {
     // 获取 frontmatter
     const { frontmatter } = useData();
 
-    /* 添加自定义 class */
+    // 添加自定义 class
     if (frontmatter.value?.layoutClass) {
       props.class = frontmatter.value.layoutClass;
     }
+
+    // 导入评论组件
     return h(DefaultTheme.Layout, props, {
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
-      "doc-after": () => h(Comment), // 导入评论组件
+      "doc-after": () => h(Comment),
     });
   },
   enhanceApp({ app, router, siteData }) {
@@ -41,12 +37,5 @@ export default {
     });
     app.component("NavLink", NavLink);
     app.component("MNavLinks", NavLinks);
-    // 添加网站访问量
-    app.component("DataPanel", DataPanel);
-    if (inBrowser) {
-      router.onAfterRouteChanged = () => {
-        busuanzi.fetch();
-      };
-    }
   },
 } satisfies Theme;
