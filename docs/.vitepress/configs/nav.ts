@@ -1,0 +1,54 @@
+/* configs/nav.ts */
+import type { DefaultTheme } from "vitepress";
+
+export const nav: DefaultTheme.Config["nav"] = [
+  { text: "主页", link: "/" },
+  {
+    text: "导航",
+    link: "/nav/",
+  },
+  {
+    text: "前端",
+    items: [
+      {
+        text: "HTML",
+        link: "/front-end/html/",
+      },
+    ],
+  },
+  {
+    text: "后端",
+    items: [
+      {
+        items: [{ text: "C语言笔记", link: "/back-end/c/" }],
+      },
+    ],
+  },
+  {
+    text: "文档搭建",
+    items: [
+      {
+        text: "介绍",
+        items: [{ text: "前言", link: "/doc-build/preface/" }],
+      },
+      {
+        text: "基础设置",
+        items: [
+          { text: "快速上手", link: "/doc-build/getting-started/" },
+          { text: "配置", link: "/doc-build/configuration/" },
+          { text: "页面", link: "/doc-build/page/" },
+          { text: "Frontmatter", link: "/doc-build/frontmatter/" },
+        ],
+      },
+      {
+        text: "进阶玩法",
+        items: [
+          { text: "markdown", link: "/doc-build/markdown/" },
+          { text: "团队", link: "/doc-build/team/" },
+          { text: "静态部署", link: "/doc-build/assets/" },
+        ],
+      },
+    ],
+  },
+  { text: "技术栈", link: "/about/" },
+];
