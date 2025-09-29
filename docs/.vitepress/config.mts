@@ -8,8 +8,8 @@ export default defineConfig({
   // 参考issues https://github.com/vuejs/vitepress/issues/3513
   // 如不设置域名则为 base: '/blog/'
   base: "/",
-  title: "xia的编程笔记",
-  description: "x的编程笔记",
+  title: "xiaoyi的编程笔记",
+  description: "xiaoyi的编程笔记",
   lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config

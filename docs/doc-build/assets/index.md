@@ -5,7 +5,6 @@
 主要讲一下GitHub，其他的方式都大同小异，[更多部署方式可以参考官方文档](https://vitepress.dev/zh/guide/deploy)
 
 
-
 ## Base
 
 ::: warning 注意

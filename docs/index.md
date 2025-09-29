@@ -4,9 +4,9 @@ layout: home
 
 hero:
   name: "coco的编程笔记"
-  text: "人之为学，不可自小，又不可自大"
+  text: "莫负金穗浪·轻步落枫风"
   image:
-    src: /logo.svg
+    src: /logo.png
     alt: VitePress
   tagline: "天地一浮云，此身乃毫末，自勉之"
 
