@@ -8,6 +8,7 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
       collapsed: false,
       items: [
         { text: "HTML", link: "/front-end/html/" },
+        { text: "HTML进阶", link: "/front-end/html-advanced/" },
         { text: "CSS", link: "/front-end/css/" },
         { text: "JavaScript", link: "/front-end/js/" },
       ],

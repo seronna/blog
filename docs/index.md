@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "coco的编程笔记"
+  name: "    "
   text: "莫负金穗浪·轻步落枫风"
   image:
     src: /logo.png
