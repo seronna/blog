@@ -116,3 +116,108 @@ form元素对静态页面无意义
 ## 表单状态
 readonly属性：只读
 disabled属性: 是否禁用，会改变表单显示样式
+
+
+## 美化表单元素
+
+### 新的伪类
+
+1. focus 元素聚焦时样式
+2. checked 单选或多选被选中时的样式
+
+### 常见用法
+1. 重置表单元素样式
+2. 设置textarea是否能调整尺寸
+css属性
+- both：默认值
+- none
+- horizontal
+- vertical: 垂直方向可以调整尺寸
+3. 文本框中文字到边缘的距离(使用 padding或者text-indent)
+4. **控制单选和多选的样式**
+> 思路：自己写一个元素仿照单选或者多选的样式然后将自带的样式隐藏
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      input {
+        padding: 0 10px;
+      }
+      /* input {
+        text-indent: 1rem;
+      } */
+      .radio {
+        width: 12px;
+        height: 12px;
+        border: 1px solid #999;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .radio.checked {
+        border-color: red;
+      }
+      .radio.checked::after {
+        content: "";
+        display: block;
+        width: 5px;
+        height: 5px;
+        background-color: black;
+        margin-left: 3.5px;
+        margin-top: 3.5px;
+        border-radius: 50%;
+      }
+
+      .radio-item .radio {
+        width: 12px;
+        height: 12px;
+        border: 1px solid #999;
+        border-radius: 50%;
+        cursor: pointer;
+        display: inline-block;
+      }
+      .radio-item input:checked + .radio {
+        border-color: aqua;
+      }
+      .radio-item input:checked ~ span {
+        color: aquamarine;
+      }
+      .radio-item input:checked + .radio::after {
+        content: "";
+        display: block;
+        width: 5px;
+        height: 5px;
+        background-color: black;
+        margin-left: 3.5px;
+        margin-top: 3.5px;
+        border-radius: 50%;
+      }
+      .radio-item input[type="radio"] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="" id="" />
+    <input type="radio" name="" id="" />
+    <input type="checkbox" name="" id="" />
+    <div class="radio checked"></div>
+    <p>
+      请选择性别
+      <label class="radio-item">
+        <input name="gender" type="radio" />
+        <span class="radio"></span>
+        <span>男</span>
+      </label>
+      <label class="radio-item">
+        <input name="gender" type="radio" />
+        <span class="radio"></span>
+        <span>女</span>
+      </label>
+    </p>
+  </body>
+</html>
+```

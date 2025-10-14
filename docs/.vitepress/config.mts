@@ -11,6 +11,14 @@ export default defineConfig({
   title: "catke的编程笔记",
   description: "catke编程笔记",
   lastUpdated: true,
+  appearance: "dark",
+  //markdown配置
+  markdown: {
+    image: {
+      // 开启图片懒加载
+      lazyLoading: true,
+    },
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: "/clover.svg",
