@@ -22,6 +22,10 @@ export const nav: DefaultTheme.Config["nav"] = [
         text: "HTML进阶",
         link: "/front-end/html-advanced",
       },
+      {
+        text: "CSS进阶",
+        link: "/front-end/css-advanced",
+      },
     ],
   },
   {

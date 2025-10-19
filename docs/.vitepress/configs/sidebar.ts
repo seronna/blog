@@ -10,6 +10,7 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
         { text: "HTML", link: "/front-end/html/" },
         { text: "HTML进阶", link: "/front-end/html-advanced/" },
         { text: "CSS", link: "/front-end/css/" },
+        { text: "CSS进阶", link: "/front-end/css-advanced/" },
         { text: "JavaScript", link: "/front-end/js/" },
       ],
     },
