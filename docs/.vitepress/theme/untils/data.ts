@@ -6,7 +6,7 @@ export const NAV_DATA: NavData[] = [
     title: "AI 导航",
     items: [
       {
-        icon: "/public/openai.png",
+        icon: "/openai.png",
         title: "ChatGPT",
         link: "https://chat.openai.com/chat",
       },
@@ -15,10 +15,22 @@ export const NAV_DATA: NavData[] = [
         title: "DeepSeek",
         link: "https://chat.deepseek.com/",
       },
+    ],
+  },
+  {
+    title: "常用工具",
+    items: [
       {
-        icon: "/icons/gemini.png",
-        title: "Gemini",
-        link: "https://gemini.google.com/app",
+        icon: "",
+        title: "Javascript Playground",
+        desc: "网页版在线 JavaScript 运行器，还提供前端学习教程，以实际演练的形式。",
+        link: "https://playcode.io/",
+      },
+      {
+        icon: "",
+        title: "阿里巴巴矢量图标库",
+        desc: "提供海量矢量图标资源，方便前端开发使用",
+        link: "https://www.iconfont.cn/",
       },
     ],
   },
@@ -30,12 +42,6 @@ export const NAV_DATA: NavData[] = [
         title: "Vue 3",
         desc: "渐进式 JavaScript 框架",
         link: "https://cn.vuejs.org",
-      },
-      {
-        icon: "https://cn.vuejs.org/logo.svg",
-        title: "Vue 2",
-        desc: "渐进式 JavaScript 框架",
-        link: "https://v2.cn.vuejs.org",
       },
       {
         icon: "https://cn.vuejs.org/logo.svg",
@@ -72,12 +78,6 @@ export const NAV_DATA: NavData[] = [
         title: "Ant Design Vue",
         desc: "Ant Design 的 Vue 实现，开发和服务于企业级后台产品",
         link: "https://antdv.com",
-      },
-      {
-        icon: "https://fastly.jsdelivr.net/npm/@vant/assets/logo.png",
-        title: "Vant",
-        desc: "轻量、可定制的移动端 Vue 组件库",
-        link: "https://vant-ui.github.io/vant",
       },
       {
         icon: "https://sf16-scmcdn-sg.ibytedtos.com/obj/static-sg/visactor-site/output/sg/img/favicon.png",
@@ -133,12 +133,6 @@ export const NAV_DATA: NavData[] = [
         desc: "面向全球中文开发者的技术内容分享与交流平台",
         link: "https://juejin.cn",
       },
-      {
-        title: "知乎",
-        icon: "https://static.zhihu.com/heifetz/assets/apple-touch-icon-60.362a8eac.png",
-        desc: "中文互联网高质量的问答社区和创作者聚集的原创内容平台",
-        link: "https://juejin.cn",
-      },
     ],
   },
   {
@@ -169,13 +163,13 @@ export const NAV_DATA: NavData[] = [
     ],
   },
   {
-    title: "常用工具",
+    title: "科研工具",
     items: [
       {
         icon: "",
-        title: "Javascript Playground",
-        desc: "网页版在线 JavaScript 运行器，还提供前端学习教程，以实际演练的形式。",
-        link: "https://playcode.io/",
+        title: "文献互助平台 - 科研通",
+        desc: "文献互助, 论文下载, 论文查重, 论文润色, 论文降重, 文献求助, 学术交流",
+        link: "https://www.ablesci.com/",
       },
     ],
   },
