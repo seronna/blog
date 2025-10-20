@@ -82,7 +82,7 @@ BFC渲染区域：这个区域有某个HTML元素创建，以下元素会在其�
 ### 多栏布局
 
 两栏布局
-
+![](./lianglanbuju.png)
 :::: details 代码
 ```html
 <!DOCTYPE html>
@@ -136,6 +136,70 @@ BFC渲染区域：这个区域有某个HTML元素创建，以下元素会在其�
 ::::
 
 三栏布局
+![](./sanlanbuju.png)
+:::: details 代码
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .container {
+        border: 3px solid;
+        padding: 20px;
+      }
+      .left {
+        float: left;
+        width: 300px;
+        margin-right: 20px;
+      }
+      .right {
+        float: right;
+        width: 300px;
+        margin-left: 20px;
+      }
+      .main {
+        overflow: hidden;
+        border: 2px solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container clearfix">
+      <aside class="left">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit eius id
+        aliquid consectetur perspiciatis natus repudiandae culpa numquam ipsam.
+        Tempora fugit nostrum voluptate! Obcaecati quod ipsum veritatis
+        reprehenderit consectetur soluta laboriosam recusandae qui corrupti amet
+        iste rem repellendus, quidem omnis
+      </aside>
+      <aside class="right">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus
+        rerum id voluptatem repellendus! Placeat corrupti libero quos,
+        cupiditate, ab porro rem quidem aut veritatis rerum tempora. Dicta ea
+        qui non maxime sapiente neque minima, atque beatae. Ab recusandae
+        voluptatem necessitatibus enim quasi, laborum facilis dolores?
+      </aside>
+      <div class="main">
+        <div style="width: 100px; height: 100px; background: red"></div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+        perspiciatis quibusdam eligendi ipsum sint, sapiente earum eum
+        dignissimos recusandae provident fuga impedit repellat nobis animi
+        commodi adipisci eveniet!
+      </div>
+    </div>
+  </body>
+</html>
+```
+
+::::
 
 ### 等高
 1. CSS3弹性盒
@@ -256,3 +320,85 @@ line-box是承载文字内容的必要条件，以下情况不生成行框：
 行块盒：
 1. 行块盒最后一行有line-box，用最后一行的基线作为整个行块盒的基线。
 2. 如果行块盒内部没有行盒，则使用下外边距作为基线
+
+
+## 堆叠上下文
+
+堆叠（层叠）上下文（stack context），它是一块区域，这块区域由某个元素创建，它规定了该区域中的内容在轴上排列的先后顺序。
+
+### 创建堆叠上下文的元素
+1. html 元素（根元素）
+2. 设置了z-index数值的定位元素（非auto值）
+
+
+### 同一个堆叠上下文中元素在z轴上的排列
+从后到前的排列顺序：
+
+1. 创建堆叠上下文的元素的背景和边框
+2. 堆叠级别(z-index, stack level)为负值的堆叠上下文
+3. 常规流非定位的块盒
+4. 非定位的浮动盒子
+5. 常规流非定位行盒
+6. 任何 z-index 是 auto 的定位子元素，以及 z-index 是 0 的堆叠上下文
+7. 堆叠级别为正值的堆叠上下文
+
+每个堆叠上下文，独立于其他堆叠上下文，它们之间不能相互穿插。
+
+
+## SVG
+
+svg：scalable vector graphics，可缩放的矢量图
+
+1. 该图片使用代码书写而成
+2. 缩放不会失真
+3. 内容轻量
+
+
+### 怎么使用
+svg可以嵌入游览器，也可以单独成一个文件
+xml语言，svg使用该语言定义
+### 书写svg代码
+
+#### 矩形:rect
+fill:填充颜色
+stock：边框颜色
+x，y设置位置
+
+
+#### 圆形：circle
+cx，cy设置圆的中心点坐标，r 半径
+
+#### 椭圆：ellipse
+rx，ry设置椭圆的半径
+
+#### 线条：line
+x1,y1、x2、y2 设置两点的坐标
+
+#### 折线：polyline
+
+#### 多边形：polygon
+
+#### 路径：path
+
+M = moveto
+L = lineto
+H = horizontal lineto
+V = vertical lineto
+C = curveto
+S = smooth curveto
+Q = quadratic Belzier curve
+T = smooth quadratic Belzier curveto
+A = elliptical Arc
+
+A
+半径1    
+半径2     
+顺时针旋转角度    
+小弧（0）或大弧（1）   
+顺时针（1）逆时针（0）
+
+Z = closepath
+
+### 例子
+
+画太极图
