@@ -50,11 +50,7 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
     {
       text: "进阶玩法",
       collapsed: false,
-      items: [
-        { text: "markdown", link: "/doc-build/markdown/index.md" },
-        { text: "团队", link: "/doc-build/team/index.md" },
-        { text: "静态部署", link: "/doc-build/assets/index.md" },
-      ],
+      items: [{ text: "markdown", link: "/doc-build/markdown/index.md" }],
     },
   ],
 };
