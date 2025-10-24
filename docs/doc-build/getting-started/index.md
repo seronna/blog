@@ -178,12 +178,6 @@ o  Add VitePress npm scripts to package.json?
 —  Done! Now run npm run docs:dev and start writing.
 ```
 
-::: tip Vue 作为对等依赖
-如果您打算使用 Vue 组件或 API 进行自定义，您还应该显式 [安装 vue](../components/index.md#安装) 作为对等依赖项
-
-暂时用不到的，我们后面会再详细说
-:::
-
 
 ### 脚本命令
 
