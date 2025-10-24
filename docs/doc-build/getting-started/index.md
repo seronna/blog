@@ -14,16 +14,6 @@
 已经安装 或者 熟练了，可以不用看此步骤
 :::
 
-::: details 必备工具
-
-必装：[安装nodejs](https://yiov.top/website/nodejs#window%E5%AE%89%E8%A3%85)
-
-建议安装：[安装vscode](https://yiov.top/daily/VSCode/)
-
-可选安装：[安装git](https://yiov.top/daily/git)
-:::
-
-
 
 
 :::: details pnpm / yarn / bun

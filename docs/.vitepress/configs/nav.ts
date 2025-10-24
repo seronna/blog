@@ -54,11 +54,7 @@ export const nav: DefaultTheme.Config["nav"] = [
       },
       {
         text: "进阶玩法",
-        items: [
-          { text: "markdown", link: "/doc-build/markdown/" },
-          { text: "团队", link: "/doc-build/team/" },
-          { text: "静态部署", link: "/doc-build/assets/" },
-        ],
+        items: [{ text: "markdown", link: "/doc-build/markdown/" }],
       },
     ],
   },

@@ -7,14 +7,6 @@
 
 ## Base
 
-::: warning 注意
-
-base必须配置，否则打包会丢失css样式！！
-
-根目录配置 `/`，那么对应 `https://yiov.github.io/`
-
-仓库 `vitepress` 配置 `/vitepress/` ，那么对应 `https://yiov.github.io/vitepress`
-:::
 
 我们根据自己的需求，选择相应的的配置
 
@@ -105,10 +97,6 @@ bun run docs:preview
 ### 手动上传
 
 默认的构建输出目录 `.vitepress/dist` ，上传到Github即可
-
-::: tip 说明
-如果你还不会使用，请参考教程：[Github的注册使用到上传](https://yiov.top/daily/github)
-:::
 
 
 在GitHub仓库 - 设置 - page里把分支改成main，默认root，保存
