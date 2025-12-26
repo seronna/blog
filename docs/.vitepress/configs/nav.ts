@@ -37,6 +37,14 @@ export const nav: DefaultTheme.Config["nav"] = [
     ],
   },
   {
+    text: "面试",
+    items: [
+      {
+        items: [{ text: "前端面试题", link: "/interview/" }],
+      }
+    ],
+  },
+  {
     text: "文档搭建",
     items: [
       {

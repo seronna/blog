@@ -13,6 +13,7 @@ import NavLinks from "./components/NavLinks.vue";
 
 // Google分析
 import googleAnalytics from "vitepress-plugin-google-analytics";
+import QuizSplit from './components/QuizSplit.vue' // 引入刚才创建的组件
 
 export default {
   extends: DefaultTheme,
@@ -37,5 +38,6 @@ export default {
     });
     app.component("NavLink", NavLink);
     app.component("MNavLinks", NavLinks);
+    app.component("QuizSplit", QuizSplit); // 注册组件
   },
 } satisfies Theme;

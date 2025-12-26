@@ -7,16 +7,16 @@ class OrderManager() {
   constructor() {
     this.orders = []
   }
-
+  // 下单
   placeOrder(order, id) {
     this.orders.push(id)
     return `You have successfully ordered ${order} (${id})`;
   }
-
+  // 跟踪订单
   trackOrder(id) {
     return `Your order ${id} will arrive in 20 minutes.`
   }
-
+  // 取消订单
   cancelOrder(id) {
     this.orders = this.orders.filter(order => order.id !== id)
     return `You have canceled your order ${id}`
@@ -24,7 +24,7 @@ class OrderManager() {
 }
 ```
 
-在 OrderManager 类中，我们可以访问 placeOrder 、 trackOrder 和 cancelOrder 方法。直接使用这些方法完全是有效的 JavaScript！
+在 OrderManager 类中，我们可以直接访问 placeOrder 、 trackOrder 和 cancelOrder 方法。
 ``` javascript
 const manager = new OrderManager();
 
@@ -37,7 +37,7 @@ manager.cancelOrder("1234");
 
 假设我们将 placeOrder 重命名为 addOrder ！这意味着我们必须确保在代码库的任何地方都不调用 placeOrder 方法，这在大型应用程序中可能会非常棘手。相反，我们希望将方法与 manager 对象解耦，并为每个命令创建单独的命令函数！
 
-让我们重构 OrderManager 类：它将不再包含 placeOrder 、 cancelOrder 和 trackOrder 方法，而将只有一个方法： execute 。这个方法将执行它所接收到的任何命令。
+所有让我们重构 OrderManager 类：它将不再包含 placeOrder 、 cancelOrder 和 trackOrder 方法，而将只有一个方法： execute 。这个方法将执行它所接收到的任何命令。
 
 每个命令都应该能够访问管理器的 orders ，我们将它作为其第一个参数传递。
 ``` javascript
@@ -52,31 +52,32 @@ class OrderManager {
   }
 }
 ```
-我们需要为订单管理器创建三个 Command
+然后我们需要为订单管理器创建三个 Command
 - PlaceOrderCommand
 - CancelOrderCommand
 - TrackOrderCommand
 ``` javascript
+// 命令基类
 class Command {
   constructor(execute) {
     this.execute = execute;
   }
 }
-
+// 下单命令
 function PlaceOrderCommand(order, id) {
   return new Command((orders) => {
     orders.push(id);
     return `You have successfully ordered ${order} (${id})`;
   });
 }
-
+// 取消订单命令
 function CancelOrderCommand(id) {
   return new Command((orders) => {
     orders = orders.filter((order) => order.id !== id);
     return `You have canceled your order ${id}`;
   });
 }
-
+// 跟踪订单命令
 function TrackOrderCommand(id) {
   return new Command(() => `Your order ${id} will arrive in 20 minutes.`);
 }

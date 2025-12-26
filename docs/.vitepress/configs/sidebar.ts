@@ -32,6 +32,13 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
     { text: "C语言常用函数", link: "/back-end/c/第08章_C语言常用函数.md" },
     { text: "文章操作", link: "/back-end/c/第09章_文件操作.md" },
   ],
+  "/interview/": [
+    { text: "前端面试题", link: "/interview/index.md" },
+    { text: "HTML面试题", link: "/interview/html.md" },
+    { text: "hot", link: "/interview/hot.md" },
+    { text: "CSS面试题", link: "/interview/css.md" },
+    { text: "JavaScript面试题", link: "/interview/js.md" },
+  ],
   "/doc-build/": [
     {
       text: "介绍",
