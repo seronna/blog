@@ -2,69 +2,36 @@
 import type { DefaultTheme } from "vitepress";
 
 export const nav: DefaultTheme.Config["nav"] = [
-  { text: "主页", link: "/" },
+  { text: "原点", link: "/" },
+  { text: "墨痕", link: "/content/mohen/" },
   {
-    text: "导航",
-    link: "/nav/",
-  },
-  {
-    text: "前端",
+    text: "卷帙",
     items: [
       {
-        text: "HTML",
-        link: "/front-end/html/",
+        text: "前端",
+        link: "/content/juanzhi/frontend/",
       },
       {
-        text: "CSS",
-        link: "/front-end/CSS/",
+        text: "后端",
+        link: "/content/juanzhi/backend/",
       },
       {
-        text: "HTML进阶",
-        link: "/front-end/html-advanced/",
-      },
-      {
-        text: "CSS进阶",
-        link: "/front-end/CSS-advanced/",
+        text: "设计模式",
+        link: "/content/juanzhi/design-patterns/",
       },
     ],
   },
+  { text: "呓语", link: "/content/yiyu/" },
+  { text: "歧路", link: "/content/qilu/" },
+  { text: "剪影", link: "/about/" },
   {
-    text: "后端",
+    text: "札记",
     items: [
       {
-        items: [{ text: "C语言笔记", link: "/back-end/c/" }],
+        text: "文档搭建",
+        link: "/content/zhaji/doc-build/",
       },
     ],
   },
-  {
-    text: "面试",
-    items: [
-      {
-        items: [{ text: "前端面试题", link: "/interview/" }],
-      }
-    ],
-  },
-  {
-    text: "文档搭建",
-    items: [
-      {
-        text: "介绍",
-        items: [{ text: "前言", link: "/doc-build/preface/" }],
-      },
-      {
-        text: "基础设置",
-        items: [
-          { text: "快速上手", link: "/doc-build/getting-started/" },
-          { text: "配置", link: "/doc-build/configuration/" },
-          { text: "页面", link: "/doc-build/page/" },
-          { text: "Frontmatter", link: "/doc-build/frontmatter/" },
-        ],
-      },
-      {
-        text: "进阶玩法",
-        items: [{ text: "markdown", link: "/doc-build/markdown/" }],
-      },
-    ],
-  },
-  { text: "技术栈", link: "/about/" },
+  { text: "拾遗", link: "/content/shiyi/" },
 ];

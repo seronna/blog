@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import DefaultTheme from 'vitepress/theme'
 import { useData } from 'vitepress'
-import { toggleDark } from './Dark' // 假设你的动画逻辑在这里
+import { provideToggleDark } from './Dark' // 假设你的动画逻辑在这里
 const { Layout } = DefaultTheme
 
 const { isDark } = useData()
-toggleDark(isDark)
+provideToggleDark(isDark)
 </script>
 
 <template>

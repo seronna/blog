@@ -4,7 +4,7 @@ const enableTransitions = () => {
     return 'startViewTransition' in document && window.matchMedia('(prefers-reduced-motion: no-preference)').matches
 }
 // 切换动画
-export const toggleDark = (isDark: { value: boolean }) => {
+export const provideToggleDark = (isDark: { value: boolean }) => {
     provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
         //如果不支持动效直接切换
         if (!enableTransitions()) {
