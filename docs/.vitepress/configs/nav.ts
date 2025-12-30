@@ -3,29 +3,24 @@ import type { DefaultTheme } from "vitepress";
 
 export const nav: DefaultTheme.Config["nav"] = [
   { text: "原点", link: "/" },
-  { text: "墨痕", link: "/content/mohen/" },
+  { text: "标签", link: "/content/mohen/" },
   { text: "导航", link: "/nav/" },
   { text: "图鉴", link: "/archive/" },
   {
-    text: "卷帙",
+    text: "札记",
     items: [
       {
         text: "前端",
-        link: "/content/juanzhi/frontend/",
+        link: "/content/zhaji/frontend/",
       },
       {
         text: "后端",
-        link: "/content/juanzhi/backend/",
+        link: "/content/zhaji/backend/",
       },
       {
         text: "设计模式",
-        link: "/content/juanzhi/design-patterns/",
+        link: "/content/zhaji/design-patterns/",
       },
-    ],
-  },
-  {
-    text: "札记",
-    items: [
       {
         text: "文档搭建",
         link: "/content/zhaji/doc-build/",

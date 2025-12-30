@@ -1,5 +1,5 @@
 // 此文件由脚本自动生成，请勿手动修改
-// 生成时间：2025/12/30 22:56:30
+// 生成时间：2025/12/30 23:08:51
 // 标签文章数据
 export interface Article {
   title: string;
@@ -17,127 +17,86 @@ export interface TagData {
 
 export const TAGS_DATA: TagData[] = [
   {
-    "tag": "卷帙",
-    "count": 16,
+    "tag": "杂记",
+    "count": 25,
     "articles": [
       {
         "title": "第01章_C语言入门",
-        "path": "/content/juanzhi/backend/c/",
+        "path": "/content/zhaji/backend/c/",
         "date": "2025-12-30",
-        "tag": "卷帙",
+        "tag": "杂记",
         "desc": "- **人类语言**：是人与人之间用于沟通的一种方式。例如：中国人与中国人用普通话沟通。而中国人要和英国人交流，可以使用普通话或英语。"
       },
       {
         "title": "第02章_变量与进制",
-        "path": "/content/juanzhi/backend/c/第02章_变量与进制.md",
+        "path": "/content/zhaji/backend/c/第02章_变量与进制.md",
         "date": "2025-12-30",
-        "tag": "卷帙",
+        "tag": "杂记",
         "desc": "讲师：尚硅谷-宋红康（江湖人称：康师傅）"
       },
       {
         "title": "第03章_运算符与流程控制",
-        "path": "/content/juanzhi/backend/c/第03章_运算符与流程控制.md",
+        "path": "/content/zhaji/backend/c/第03章_运算符与流程控制.md",
         "date": "2025-12-30",
-        "tag": "卷帙",
+        "tag": "杂记",
         "desc": "讲师：尚硅谷-宋红康（江湖人称：康师傅）"
       },
       {
         "title": "第05章_指针",
-        "path": "/content/juanzhi/backend/c/第05章_指针(重点).md",
+        "path": "/content/zhaji/backend/c/第05章_指针(重点).md",
         "date": "2025-12-30",
-        "tag": "卷帙",
+        "tag": "杂记",
         "desc": "讲师：尚硅谷-宋红康（江湖人称：康师傅）"
       },
       {
         "title": "第06章_函数",
-        "path": "/content/juanzhi/backend/c/第06章_函数.md",
+        "path": "/content/zhaji/backend/c/第06章_函数.md",
         "date": "2025-12-30",
-        "tag": "卷帙",
+        "tag": "杂记",
         "desc": "讲师：尚硅谷-宋红康（江湖人称：康师傅）"
       },
       {
         "title": "第07章_结构体与共用体",
-        "path": "/content/juanzhi/backend/c/第07章_结构体与共用体.md",
+        "path": "/content/zhaji/backend/c/第07章_结构体与共用体.md",
         "date": "2025-12-30",
-        "tag": "卷帙",
+        "tag": "杂记",
         "desc": "讲师：尚硅谷-宋红康（江湖人称：康师傅）"
       },
       {
         "title": "第08章_C语言常用函数",
-        "path": "/content/juanzhi/backend/c/第08章_C语言常用函数.md",
+        "path": "/content/zhaji/backend/c/第08章_C语言常用函数.md",
         "date": "2025-12-30",
-        "tag": "卷帙",
+        "tag": "杂记",
         "desc": "讲师：尚硅谷-宋红康（江湖人称：康师傅）"
       },
       {
         "title": "第09章_文件操作",
-        "path": "/content/juanzhi/backend/c/第09章_文件操作.md",
+        "path": "/content/zhaji/backend/c/第09章_文件操作.md",
         "date": "2025-12-30",
-        "tag": "卷帙",
+        "tag": "杂记",
         "desc": "讲师：尚硅谷-宋红康（江湖人称：康师傅）"
       },
       {
         "title": "后端技术",
-        "path": "/content/juanzhi/backend/",
+        "path": "/content/zhaji/backend/",
         "date": "2025-12-30",
-        "tag": "卷帙",
+        "tag": "杂记",
         "desc": "后端技术是指服务器端的开发技术，包括编程语言、框架、数据库等。"
       },
       {
         "title": "命令模式",
-        "path": "/content/juanzhi/design-patterns/command-patterns/",
+        "path": "/content/zhaji/design-patterns/command-patterns/",
         "date": "2025-12-30",
-        "tag": "卷帙",
+        "tag": "杂记",
         "desc": "通过命令模式，我们可以将执行特定任务的对象与调用方法的对象解耦。 假设我们有一个在线食品配送平台。用户可以下单、跟踪和取消订单。"
       },
       {
         "title": "设计模式",
-        "path": "/content/juanzhi/design-patterns/",
+        "path": "/content/zhaji/design-patterns/",
         "date": "2025-12-30",
-        "tag": "卷帙",
+        "tag": "杂记",
         "desc": "设计模式是解决软件设计中常见问题的可复用方案。"
       },
-      {
-        "title": "为网页添加样式",
-        "path": "/content/juanzhi/frontend/CSS/",
-        "date": "2025-12-30",
-        "tag": "卷帙",
-        "desc": "CSS 规则 = 选择器 + 声明块"
-      },
-      {
-        "title": "@规则",
-        "path": "/content/juanzhi/frontend/CSS-advanced/",
-        "date": "2025-12-30",
-        "tag": "卷帙",
-        "desc": "at-rule: @规则、@语句、CSS语句"
-      },
-      {
-        "title": "语义化",
-        "path": "/content/juanzhi/frontend/html/",
-        "date": "2025-12-30",
-        "tag": "卷帙",
-        "desc": "属性的分类：全局属性、局部属性 空元素： 没有结束标记"
-      },
-      {
-        "title": "iframe 元素",
-        "path": "/content/juanzhi/frontend/html-advanced/",
-        "date": "2025-12-30",
-        "tag": "卷帙",
-        "desc": "通常用于在网页中嵌入另一个页面"
-      },
-      {
-        "title": "1. HTML",
-        "path": "/content/juanzhi/frontend/",
-        "date": "2025-12-30",
-        "tag": "卷帙",
-        "desc": ""
-      }
-    ]
-  },
-  {
-    "tag": "杂记",
-    "count": 9,
-    "articles": [
       {
         "title": "静态部署",
         "path": "/content/zhaji/doc-build/assets/",
@@ -197,6 +156,41 @@ export const TAGS_DATA: TagData[] = [
       {
         "title": "待完善",
         "path": "/content/zhaji/doc-build/style/",
+        "date": "2025-12-30",
+        "tag": "杂记",
+        "desc": ""
+      },
+      {
+        "title": "为网页添加样式",
+        "path": "/content/zhaji/frontend/CSS/",
+        "date": "2025-12-30",
+        "tag": "杂记",
+        "desc": "CSS 规则 = 选择器 + 声明块"
+      },
+      {
+        "title": "@规则",
+        "path": "/content/zhaji/frontend/CSS-advanced/",
+        "date": "2025-12-30",
+        "tag": "杂记",
+        "desc": "at-rule: @规则、@语句、CSS语句"
+      },
+      {
+        "title": "语义化",
+        "path": "/content/zhaji/frontend/html/",
+        "date": "2025-12-30",
+        "tag": "杂记",
+        "desc": "属性的分类：全局属性、局部属性 空元素： 没有结束标记"
+      },
+      {
+        "title": "iframe 元素",
+        "path": "/content/zhaji/frontend/html-advanced/",
+        "date": "2025-12-30",
+        "tag": "杂记",
+        "desc": "通常用于在网页中嵌入另一个页面"
+      },
+      {
+        "title": "1. HTML",
+        "path": "/content/zhaji/frontend/",
         "date": "2025-12-30",
         "tag": "杂记",
         "desc": ""

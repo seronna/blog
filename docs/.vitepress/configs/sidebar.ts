@@ -2,17 +2,17 @@
 import type { DefaultTheme } from "vitepress";
 
 export const sidebar: DefaultTheme.Config["sidebar"] = {
-  // 卷帙 - 技术学习笔记
-  "/content/juanzhi/frontend/": [
+  // 札记 - 技术学习笔记
+  "/content/zhaji/frontend/": [
     {
       text: "入门",
       collapsed: false,
       items: [
-        { text: "HTML", link: "/content/juanzhi/frontend/html/" },
-        { text: "HTML进阶", link: "/content/juanzhi/frontend/html-advanced/" },
-        { text: "CSS", link: "/content/juanzhi/frontend/CSS/" },
-        { text: "CSS进阶", link: "/content/juanzhi/frontend/CSS-advanced/" },
-        { text: "JavaScript", link: "/content/juanzhi/frontend/js/" },
+        { text: "HTML", link: "/content/zhaji/frontend/html/" },
+        { text: "HTML进阶", link: "/content/zhaji/frontend/html-advanced/" },
+        { text: "CSS", link: "/content/zhaji/frontend/CSS/" },
+        { text: "CSS进阶", link: "/content/zhaji/frontend/CSS-advanced/" },
+        { text: "JavaScript", link: "/content/zhaji/frontend/js/" },
       ],
     },
     {
@@ -21,27 +21,27 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
     },
   ],
 
-  "/content/juanzhi/backend/c/": [
-    { text: "C语言入门", link: "/content/juanzhi/backend/c/" },
+  "/content/zhaji/backend/c/": [
+    { text: "C语言入门", link: "/content/zhaji/backend/c/" },
     {
       text: "变量与进制",
-      link: "/content/juanzhi/backend/c/第02章_变量与进制.md",
+      link: "/content/zhaji/backend/c/第02章_变量与进制.md",
     },
     {
       text: "运算符与流程控制",
-      link: "/content/juanzhi/backend/c/第03章_运算符与流程控制.md",
+      link: "/content/zhaji/backend/c/第03章_运算符与流程控制.md",
     },
-    { text: "指针", link: "/content/juanzhi/backend/c/第05章_指针(重点).md" },
-    { text: "函数", link: "/content/juanzhi/backend/c/第06章_函数.md" },
+    { text: "指针", link: "/content/zhaji/backend/c/第05章_指针(重点).md" },
+    { text: "函数", link: "/content/zhaji/backend/c/第06章_函数.md" },
     {
       text: "结构体与共用体",
-      link: "/content/juanzhi/backend/c/第07章_结构体与共用体.md",
+      link: "/content/zhaji/backend/c/第07章_结构体与共用体.md",
     },
     {
       text: "C语言常用函数",
-      link: "/content/juanzhi/backend/c/第08章_C语言常用函数.md",
+      link: "/content/zhaji/backend/c/第08章_C语言常用函数.md",
     },
-    { text: "文章操作", link: "/content/juanzhi/backend/c/第09章_文件操作.md" },
+    { text: "文章操作", link: "/content/zhaji/backend/c/第09章_文件操作.md" },
   ],
 
   // 札记 - 技术日常分享
@@ -83,22 +83,15 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
     },
   ],
 
-  // 其他目录的基础配置
-  "/content/juanzhi/": [
-    {
-      text: "技术学习笔记",
-      items: [
-        { text: "前端", link: "/content/juanzhi/frontend/" },
-        { text: "后端", link: "/content/juanzhi/backend/" },
-        { text: "设计模式", link: "/content/juanzhi/design-patterns/" },
-      ],
-    },
-  ],
-
   "/content/zhaji/": [
     {
-      text: "技术日常分享",
-      items: [{ text: "文档搭建", link: "/content/zhaji/doc-build/" }],
+      text: "技术学习与分享",
+      items: [
+        { text: "前端", link: "/content/zhaji/frontend/" },
+        { text: "后端", link: "/content/zhaji/backend/" },
+        { text: "设计模式", link: "/content/zhaji/design-patterns/" },
+        { text: "文档搭建", link: "/content/zhaji/doc-build/" },
+      ],
     },
   ],
 
