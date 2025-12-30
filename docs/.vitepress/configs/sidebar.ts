@@ -118,8 +118,13 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
 
   "/content/shiyi/": [
     {
-      text: "收藏",
-      items: [{ text: "重要文章", link: "/content/shiyi/important/" }],
+      text: "记录",
+      items: [
+        {
+          text: "深入理解 JavaScript 执行机制：从预编译到 AO 对象",
+          link: "/content/shiyi/important/",
+        },
+      ],
     },
   ],
 

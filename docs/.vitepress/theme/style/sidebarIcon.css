@@ -11,53 +11,69 @@
 /* 侧边栏图标 */
 /* 选中所有 .VPSidebarItem 元素，排除带有 .is-link 类的 */
 #VPSidebarNav .VPSidebarItem:not(.is-link).collapsed > .item {
-  display: inline-flex;
-  align-items: center; /* 垂直居中对齐图标和文本 */
+  display: flex;
+  align-items: center;
 }
 
 /* 为所有不带 .is-link 的 .VPSidebarItem 折叠状态添加图标 */
 #VPSidebarNav .VPSidebarItem:not(.is-link).collapsed > .item::before {
   content: "";
-  background-image: url("../../../public/file-close.svg"); /* 设置图标路径 */
+  background-image: url("../../../public/file-close.svg");
   width: 16px;
   height: 16px;
-  display: inline-block;
-  vertical-align: middle; /* 确保图标与文本垂直居中 */
+  display: block;
+  flex-shrink: 0;
   background-size: cover;
-  margin-right: 4px; /* 给图标和文本之间增加间距 */
+  margin-right: 6px;
 }
 
 #VPSidebarNav .VPSidebarItem:not(.is-link) > .item {
-  display: inline-flex;
-  align-items: center; /* 垂直居中对齐图标和文本 */
+  display: flex;
+  align-items: center;
 }
 
 /* 为所有不带 .is-link 的 .VPSidebarItem 非折叠状态添加图标 */
 #VPSidebarNav .VPSidebarItem:not(.is-link) > .item::before {
   content: "";
-  background-image: url("../../../public/icon_document_open.svg"); /* 设置图标路径 */
+  background-image: url("../../../public/icon_document_open.svg");
   width: 16px;
   height: 16px;
-  display: inline-block;
-  vertical-align: middle; /* 确保图标与文本垂直居中 */
+  display: block;
+  flex-shrink: 0;
   background-size: cover;
-  margin-right: 4px; /* 给图标和文本之间增加间距 */
+  margin-right: 6px;
 }
 
 /* 选中带有 .is-link 的 .VPSidebarItem 的直接子元素 .item */
 #VPSidebarNav .VPSidebarItem.is-link > .item {
-  display: inline-flex;
-  align-items: center; /* 垂直居中图标和文字 */
+  display: flex;
+  align-items: center;
 }
 
 /* 为选中的 .item 添加图标 */
 #VPSidebarNav .VPSidebarItem.is-link > .item::before {
   content: "";
-  background-image: url("../../../public/file.svg"); /* 图标路径 */
+  background-image: url("../../../public/file.svg");
   width: 16px;
   height: 16px;
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
+  flex-shrink: 0;
   background-size: cover;
-  margin-right: 4px; /* 图标与文字间距 */
+  margin-right: 6px;
+}
+
+/* 确保文本内容能正确换行，不会遮挡图标 */
+#VPSidebarNav .VPSidebarItem .item .text {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  flex: 1;
+  min-width: 0;
+}
+
+/* 确保链接文本能够正确换行，不会遮挡图标 */
+#VPSidebarNav .VPSidebarItem.is-link .link {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  flex: 1;
+  min-width: 0;
 }

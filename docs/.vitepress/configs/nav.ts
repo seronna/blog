@@ -4,6 +4,8 @@ import type { DefaultTheme } from "vitepress";
 export const nav: DefaultTheme.Config["nav"] = [
   { text: "原点", link: "/" },
   { text: "墨痕", link: "/content/mohen/" },
+  { text: "导航", link: "/nav/" },
+  { text: "图鉴", link: "/archive/" },
   {
     text: "卷帙",
     items: [
@@ -21,9 +23,6 @@ export const nav: DefaultTheme.Config["nav"] = [
       },
     ],
   },
-  { text: "呓语", link: "/content/yiyu/" },
-  { text: "歧路", link: "/content/qilu/" },
-  { text: "剪影", link: "/about/" },
   {
     text: "札记",
     items: [
@@ -33,5 +32,7 @@ export const nav: DefaultTheme.Config["nav"] = [
       },
     ],
   },
+  { text: "歧路", link: "/content/qilu/" },
   { text: "拾遗", link: "/content/shiyi/" },
+  { text: "剪影", link: "/about/" },
 ];
