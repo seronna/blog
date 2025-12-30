@@ -1,12 +1,10 @@
-// https://vitepress.dev/guide/custom-theme
 import { h } from "vue";
 import type { Theme } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import "./style.css";
 import Comment from "./Comment.vue";
 import "./style/index.css";
-import Layout from './components/Layout.vue'
-
+import Layout from "./components/Layout.vue";
 
 // 导航配置
 import { useData } from "vitepress";
@@ -15,7 +13,7 @@ import NavLinks from "./components/NavLinks.vue";
 
 // Google分析
 import googleAnalytics from "vitepress-plugin-google-analytics";
-import QuizSplit from './components/QuizSplit.vue' // 引入刚才创建的组件
+import QuizSplit from "./components/QuizSplit.vue"; // 引入刚才创建的组件
 
 export default {
   extends: DefaultTheme,

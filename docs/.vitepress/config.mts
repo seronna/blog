@@ -2,11 +2,7 @@ import { defineConfig } from "vitepress";
 import { nav } from "./configs";
 import { sidebar } from "./configs";
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
-  // 设置域名取消base值
-  // 参考issues https://github.com/vuejs/vitepress/issues/3513
-  // 如不设置域名则为 base: '/blog/'
   base: "/",
   title: "橙黄橘绿",
   description: "记录学习笔记，分享技术文章。",
@@ -15,7 +11,6 @@ export default defineConfig({
   //markdown配置
   markdown: {
     image: {
-      // 开启图片懒加载
       lazyLoading: true,
     },
   },

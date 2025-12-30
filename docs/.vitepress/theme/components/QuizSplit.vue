@@ -1,52 +1,56 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted, computed } from "vue";
 
 const props = defineProps({
   id: { type: String, required: true },
-  tag: { type: String, default: '' },      // 例如：Vue3, 算法
-  difficulty: { type: String, default: '' } // level: easy, medium, hard
-})
+  tag: { type: String, default: "" }, // 例如：Vue3, 算法
+  difficulty: { type: String, default: "" }, // level: easy, medium, hard
+});
 
-const isPinned = ref(false)
-const status = ref('none') // none | master | review
-const storageKeyPin = `quiz-pin-${props.id}`
-const storageKeyStatus = `quiz-status-${props.id}`
+const isPinned = ref(false);
+const status = ref("none"); // none | master | review
+const storageKeyPin = `quiz-pin-${props.id}`;
+const storageKeyStatus = `quiz-status-${props.id}`;
 
 onMounted(() => {
   // 恢复固定状态
-  isPinned.value = localStorage.getItem(storageKeyPin) === 'true'
+  isPinned.value = localStorage.getItem(storageKeyPin) === "true";
   // 恢复掌握状态
-  const savedStatus = localStorage.getItem(storageKeyStatus)
-  if (savedStatus) status.value = savedStatus
-})
+  const savedStatus = localStorage.getItem(storageKeyStatus);
+  if (savedStatus) status.value = savedStatus;
+});
 
 const togglePin = () => {
-  isPinned.value = !isPinned.value
-  if (isPinned.value) localStorage.setItem(storageKeyPin, 'true')
-  else localStorage.removeItem(storageKeyPin)
-}
+  isPinned.value = !isPinned.value;
+  if (isPinned.value) localStorage.setItem(storageKeyPin, "true");
+  else localStorage.removeItem(storageKeyPin);
+};
 
 // 标记掌握程度
 const setStatus = (newStatus) => {
-  status.value = newStatus
-  localStorage.setItem(storageKeyStatus, newStatus)
-  
+  status.value = newStatus;
+  localStorage.setItem(storageKeyStatus, newStatus);
+
   // 如果标记为“会了”，自动取消固定，收起答案（可选体验）
-  if (newStatus === 'master') {
-    isPinned.value = false
-    localStorage.removeItem(storageKeyPin)
+  if (newStatus === "master") {
+    isPinned.value = false;
+    localStorage.removeItem(storageKeyPin);
   }
-}
+};
 
 // 计算难度颜色
 const difficultyColor = computed(() => {
-  switch(props.difficulty.toLowerCase()) {
-    case 'hard': return 'red';
-    case 'medium': return 'orange';
-    case 'easy': return 'green';
-    default: return 'gray';
+  switch (props.difficulty.toLowerCase()) {
+    case "hard":
+      return "red";
+    case "medium":
+      return "orange";
+    case "easy":
+      return "green";
+    default:
+      return "gray";
   }
-})
+});
 </script>
 
 <template>
@@ -56,11 +60,16 @@ const difficultyColor = computed(() => {
         <div class="header-left">
           <span>题目</span>
           <span v-if="tag" class="badge tag">{{ tag }}</span>
-          <span v-if="difficulty" class="badge level" :class="difficultyColor">{{ difficulty }}</span>
+          <span
+            v-if="difficulty"
+            class="badge level"
+            :class="difficultyColor"
+            >{{ difficulty }}</span
+          >
         </div>
-        
+
         <div class="status-indicator" v-if="status !== 'none'">
-          {{ status === 'master' ? '已掌握' : '需复习' }}
+          {{ status === "master" ? "已掌握" : "需复习" }}
         </div>
       </div>
       <div class="pane-content">
@@ -72,33 +81,32 @@ const difficultyColor = computed(() => {
       <div class="pane-header header-right">
         <span>答案</span>
         <button class="pin-btn" @click.stop="togglePin">
-          <span class="icon">{{ isPinned ? '📌' : '📍' }}</span>
-          {{ isPinned ? '已固定' : '固定' }}
+          {{ isPinned ? "已固定" : "固定" }}
         </button>
       </div>
 
       <div class="answer-wrapper" @click="!isPinned && togglePin()">
         <div class="blur-mask" v-if="!isPinned">
           <div class="mask-content">
-            <span>🖱️ 悬停查看 / 点击固定</span>
+            <span>悬停查看 / 点击固定</span>
           </div>
         </div>
-        
+
         <div class="pane-content answer-content">
           <slot name="answer"></slot>
-          
+
           <div class="action-bar">
             <div class="action-text">这道题你掌握了吗？</div>
             <div class="action-buttons">
-              <button 
-                class="btn-review" 
+              <button
+                class="btn-review"
                 :class="{ active: status === 'review' }"
                 @click.stop="setStatus('review')"
               >
                 忘了/模糊
               </button>
-              <button 
-                class="btn-master" 
+              <button
+                class="btn-master"
                 :class="{ active: status === 'master' }"
                 @click.stop="setStatus('master')"
               >
@@ -124,11 +132,15 @@ const difficultyColor = computed(() => {
 }
 
 @media (max-width: 768px) {
-  .quiz-container { flex-direction: column; gap: 16px; }
+  .quiz-container {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 
 /* --- 卡片通用样式 --- */
-.quiz-left, .quiz-right {
+.quiz-left,
+.quiz-right {
   flex: 1;
   border-radius: 16px; /* 更大的圆角 */
   background-color: var(--vp-c-bg); /* 使用主背景色 */
@@ -141,7 +153,8 @@ const difficultyColor = computed(() => {
 }
 
 /* 悬停时稍微浮起，增加交互感 */
-.quiz-left:hover, .quiz-right:hover {
+.quiz-left:hover,
+.quiz-right:hover {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
   border-color: var(--vp-c-brand-dimm);
   transform: translateY(-2px);
@@ -149,13 +162,13 @@ const difficultyColor = computed(() => {
 
 /* --- 状态反馈 (左侧) --- */
 /* 掌握状态：绿色光晕 */
-.status-master .quiz-left { 
-  border-color: #10b981; 
+.status-master .quiz-left {
+  border-color: #10b981;
   background-color: rgba(16, 185, 129, 0.02);
 }
 /* 复习状态：红色光晕 */
-.status-review .quiz-left { 
-  border-color: #f43f5e; 
+.status-review .quiz-left {
+  border-color: #f43f5e;
   background-color: rgba(244, 63, 94, 0.02);
 }
 
@@ -173,7 +186,11 @@ const difficultyColor = computed(() => {
   user-select: none;
 }
 
-.header-left { display: flex; align-items: center; gap: 10px; }
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
 /* --- 徽章 (Badges) --- */
 .badge {
@@ -185,16 +202,25 @@ const difficultyColor = computed(() => {
   text-transform: uppercase;
 }
 
-.tag { 
-  background: var(--vp-c-default-soft); 
-  color: var(--vp-c-text-1); 
+.tag {
+  background: var(--vp-c-default-soft);
+  color: var(--vp-c-text-1);
   border: 1px solid var(--vp-c-divider);
 }
 
 /* 难度颜色微调 */
-.level.easy { background: rgba(16, 185, 129, 0.15); color: #059669; }
-.level.medium { background: rgba(245, 158, 11, 0.15); color: #d97706; }
-.level.hard { background: rgba(244, 63, 94, 0.15); color: #e11d48; }
+.level.easy {
+  background: rgba(16, 185, 129, 0.15);
+  color: #059669;
+}
+.level.medium {
+  background: rgba(245, 158, 11, 0.15);
+  color: #d97706;
+}
+.level.hard {
+  background: rgba(244, 63, 94, 0.15);
+  color: #e11d48;
+}
 
 /* 状态指示文字 */
 .status-indicator {
@@ -242,8 +268,11 @@ const difficultyColor = computed(() => {
 
 /* --- 遮罩提示 --- */
 .blur-mask {
-  position: absolute; inset: 0;
-  display: flex; align-items: center; justify-content: center;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 10;
   backdrop-filter: blur(2px); /* 磨砂效果 */
   transition: opacity 0.3s ease;
@@ -255,14 +284,16 @@ const difficultyColor = computed(() => {
   border-radius: 30px;
   font-weight: 600;
   color: var(--vp-c-brand-dark);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  border: 1px solid rgba(255,255,255,0.5);
-  display: flex; align-items: center; gap: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 /* 暗黑模式下的遮罩适配 */
 :root.dark .mask-content {
   background: rgba(30, 30, 30, 0.9);
-  border-color: rgba(255,255,255,0.1);
+  border-color: rgba(255, 255, 255, 0.1);
   color: var(--vp-c-brand-light);
 }
 
@@ -275,7 +306,7 @@ const difficultyColor = computed(() => {
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  opacity: 0; 
+  opacity: 0;
   transform: translateY(10px);
   transition: all 0.4s ease 0.1s; /* 稍微延迟一点出现 */
 }
@@ -286,10 +317,14 @@ const difficultyColor = computed(() => {
   transform: translateY(0);
 }
 
-.action-buttons { display: flex; gap: 16px; }
+.action-buttons {
+  display: flex;
+  gap: 16px;
+}
 
 /* 按钮美化 */
-.btn-review, .btn-master {
+.btn-review,
+.btn-master {
   padding: 8px 20px;
   border-radius: 8px;
   border: 1px solid transparent;
@@ -297,16 +332,40 @@ const difficultyColor = computed(() => {
   font-size: 13px;
   font-weight: 600;
   transition: all 0.2s;
-  display: flex; align-items: center; gap: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.btn-review { background: var(--vp-c-bg-mute); color: var(--vp-c-text-2); }
-.btn-review:hover { background: #fee2e2; color: #ef4444; transform: scale(1.05); }
-.btn-review.active { background: #ef4444; color: white; box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3); }
+.btn-review {
+  background: var(--vp-c-bg-mute);
+  color: var(--vp-c-text-2);
+}
+.btn-review:hover {
+  background: #fee2e2;
+  color: #ef4444;
+  transform: scale(1.05);
+}
+.btn-review.active {
+  background: #ef4444;
+  color: white;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
 
-.btn-master { background: var(--vp-c-bg-mute); color: var(--vp-c-text-2); }
-.btn-master:hover { background: #d1fae5; color: #10b981; transform: scale(1.05); }
-.btn-master.active { background: #10b981; color: white; box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); }
+.btn-master {
+  background: var(--vp-c-bg-mute);
+  color: var(--vp-c-text-2);
+}
+.btn-master:hover {
+  background: #d1fae5;
+  color: #10b981;
+  transform: scale(1.05);
+}
+.btn-master.active {
+  background: #10b981;
+  color: white;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
 
 /* 固定按钮 (右上角) */
 .pin-btn {
@@ -318,10 +377,26 @@ const difficultyColor = computed(() => {
   font-size: 12px;
   cursor: pointer;
   transition: all 0.2s;
-  display: flex; align-items: center; gap: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
-.pin-btn:hover { background: var(--vp-c-bg-soft); color: var(--vp-c-brand); }
-.quiz-right.is-pinned .pin-btn { background: var(--vp-c-brand-dimm); color: var(--vp-c-brand); font-weight: bold; }
+.pin-btn:hover {
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-brand);
+}
+.quiz-right.is-pinned .pin-btn {
+  background: var(--vp-c-brand-dimm);
+  color: var(--vp-c-brand);
+  font-weight: bold;
+}
 
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 </style>
