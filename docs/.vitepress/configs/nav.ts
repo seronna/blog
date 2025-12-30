@@ -4,8 +4,8 @@ import type { DefaultTheme } from "vitepress";
 export const nav: DefaultTheme.Config["nav"] = [
   { text: "原点", link: "/" },
   { text: "标签", link: "/content/mohen/" },
-  { text: "导航", link: "/nav/" },
   { text: "图鉴", link: "/archive/" },
+  { text: "导航", link: "/nav/" },
   {
     text: "札记",
     items: [

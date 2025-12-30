@@ -14,12 +14,45 @@ function parseFrontmatter(content) {
 
   const frontmatter = {}
   const lines = match[1].split('\n')
+  let currentKey = null
+  let currentArray = null
 
   lines.forEach(line => {
+    // 处理数组项（以 - 开头）
+    if (line.trim().startsWith('-') && currentKey) {
+      if (!currentArray) {
+        currentArray = []
+        frontmatter[currentKey] = currentArray
+      }
+      const value = line.trim().slice(1).trim()
+      currentArray.push(value)
+      return
+    }
+
     const colonIndex = line.indexOf(':')
     if (colonIndex > 0) {
       const key = line.slice(0, colonIndex).trim()
       let value = line.slice(colonIndex + 1).trim()
+
+      // 重置数组状态
+      currentKey = key
+      currentArray = null
+
+      // 处理中括号数组格式 [item1, item2]
+      if (value.startsWith('[') && value.endsWith(']')) {
+        const arrayContent = value.slice(1, -1)
+        // 支持中文逗号和英文逗号
+        frontmatter[key] = arrayContent
+          .split(/[,，]/)
+          .map(item => item.trim())
+          .filter(item => item) // 过滤空字符串
+        return
+      }
+
+      // 如果值为空，可能是多行数组的开始
+      if (!value) {
+        return
+      }
 
       // 移除引号
       value = value.replace(/^["']|["']$/g, '')
@@ -172,18 +205,24 @@ function generateData() {
 
       // 获取或推断其他信息
       const date = frontmatter.date || new Date().toISOString().split('T')[0]
-      const tag = frontmatter.tag || frontmatter.tags || inferTagFromPath(file, contentDir)
+      let tags = frontmatter.tag || frontmatter.tags || inferTagFromPath(file, contentDir)
+
+      // 统一转换为数组格式
+      if (!Array.isArray(tags)) {
+        tags = [tags]
+      }
+
       const desc = frontmatter.description || frontmatter.desc || extractDescription(content)
 
       articles.push({
         title,
         path: urlPath,
         date,
-        tag,
+        tags,
         desc,
       })
 
-      console.log(`✓ ${title} (${tag})`)
+      console.log(`✓ ${title} (${tags.join(', ')})`)
     } catch (error) {
       console.error(`❌ 处理文件出错 ${file}:`, error.message)
     }
@@ -192,13 +231,15 @@ function generateData() {
   // 按日期降序排序
   articles.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 
-  // 生成标签数据
+  // 生成标签数据 - 一篇文章可以出现在多个标签下
   const tagMap = new Map()
   articles.forEach(article => {
-    if (!tagMap.has(article.tag)) {
-      tagMap.set(article.tag, [])
-    }
-    tagMap.get(article.tag).push(article)
+    article.tags.forEach(tag => {
+      if (!tagMap.has(tag)) {
+        tagMap.set(tag, [])
+      }
+      tagMap.get(tag).push(article)
+    })
   })
 
   const tagsData = Array.from(tagMap.entries())
@@ -218,8 +259,8 @@ function generateData() {
     }
     yearMap.get(year).push({
       ...article,
-      icon: getIconForTag(article.tag),
-      iconColor: getIconColorForTag(article.tag),
+      icon: getIconForTag(article.tags[0]),
+      iconColor: getIconColorForTag(article.tags[0]),
     })
   })
 
@@ -239,7 +280,7 @@ export interface Article {
   title: string;
   path: string;
   date: string;
-  tag: string;
+  tags: string[];
   desc: string;
 }
 
@@ -250,6 +291,9 @@ export interface TagData {
 }
 
 export const TAGS_DATA: TagData[] = ${JSON.stringify(tagsData, null, 2)};
+
+// 导出所有文章（已去重）
+export const ALL_ARTICLES: Article[] = ${JSON.stringify(articles, null, 2)};
 `
 
   // 写入 archive.ts
@@ -261,7 +305,7 @@ export interface ArchiveArticle {
   title: string;
   path: string;
   date: string;
-  tag: string;
+  tags: string[];
   desc: string;
   icon?: string;
   iconColor?: string;

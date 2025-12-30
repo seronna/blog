@@ -9,7 +9,11 @@ const props = defineProps<{
 const selectedTag = ref<string>("all");
 
 const allTags = computed(() => {
-  return [...new Set(props.articles.map((a) => a.tag))].sort();
+  const tagSet = new Set<string>();
+  props.articles.forEach(article => {
+    article.tags.forEach(tag => tagSet.add(tag));
+  });
+  return Array.from(tagSet).sort();
 });
 
 const totalArticles = computed(() => props.articles.length);
@@ -18,7 +22,7 @@ const filteredArticles = computed(() => {
   if (selectedTag.value === "all") {
     return props.articles;
   }
-  return props.articles.filter((a) => a.tag === selectedTag.value);
+  return props.articles.filter((a) => a.tags.includes(selectedTag.value));
 });
 
 const selectTag = (tag: string) => {
@@ -26,7 +30,7 @@ const selectTag = (tag: string) => {
 };
 
 const getTagCount = (tag: string) => {
-  return props.articles.filter((a) => a.tag === tag).length;
+  return props.articles.filter((a) => a.tags.includes(tag)).length;
 };
 </script>
 
@@ -59,7 +63,13 @@ const getTagCount = (tag: string) => {
         class="article-card"
       >
         <div class="article-meta">
-          <span class="article-tag">{{ article.tag }}</span>
+          <span
+            v-for="tag in article.tags"
+            :key="tag"
+            class="article-tag"
+          >
+            {{ tag }}
+          </span>
         </div>
         <h3 class="article-title">
           <a :href="article.path">{{ article.title }}</a>
@@ -157,7 +167,8 @@ const getTagCount = (tag: string) => {
 
 .article-meta {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   margin-bottom: 1rem;
   font-size: 0.85rem;
 }

@@ -14,6 +14,15 @@ export default defineConfig({
       lazyLoading: true,
     },
   },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern",
+        },
+      },
+    },
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: "/clover.svg",

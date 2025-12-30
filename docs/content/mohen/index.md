@@ -11,11 +11,8 @@ lastUpdated: false
 <style src="/.vitepress/theme/style/tags.scss"></style>
 
 <script setup>
-import { TAGS_DATA } from '/.vitepress/theme/utils/tags'
+import { ALL_ARTICLES } from '/.vitepress/theme/utils/tags'
 import Tags from '/.vitepress/theme/components/Tags.vue'
-
-// 获取所有文章
-const allArticles = TAGS_DATA.flatMap(tagData => tagData.articles)
 </script>
 
-<Tags :articles="allArticles" />
+<Tags :articles="ALL_ARTICLES" />

@@ -1,3 +1,10 @@
+---
+tags: [JavaScript，执行机制，预编译]
+date: 2025-12-25
+title: 深入理解 JavaScript 执行机制：从预编译到 AO 对象
+desc: 深入探讨 JavaScript 执行机制的核心原理，包括预编译、AO 对象等关键概念。
+---
+
 # 深入理解 JavaScript 执行机制：从预编译到 AO 对象
 在前端面试或深入学习 JavaScript 时，我们经常遇到类似“变量提升”、“函数提升”以及复杂的 console.log 输出问题。要彻底搞懂这些，就必须深入 JavaScript 的底层执行机制。
 

@@ -54,7 +54,13 @@ const currentYear =
           <p class="article-desc">{{ article.desc }}</p>
 
           <div class="article-tags">
-            <span class="tag">#{{ article.tag }}</span>
+            <span
+              v-for="tag in article.tags"
+              :key="tag"
+              class="tag"
+            >
+              #{{ tag }}
+            </span>
           </div>
         </article>
       </div>
