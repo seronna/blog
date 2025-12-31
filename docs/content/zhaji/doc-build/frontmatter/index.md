@@ -157,10 +157,6 @@ style >
 style >
 ```
 
-::: tip 说明
-[其他美化方案请点我查看](../style/index.md)
-:::
-
 ## Features
 
 特性可以使用emoji表情、图片以及SVG创建图形

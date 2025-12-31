@@ -10,6 +10,5 @@
 - [页面](./page/)
 - [Frontmatter](./frontmatter/)
 - [Markdown](./markdown/)
-- [样式](./style/)
 - [团队](./team/)
 - [资源](./assets/)

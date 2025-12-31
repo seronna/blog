@@ -261,7 +261,6 @@ Hello, VitePress!
 ::: danger 为什么和我不一样？
 因为我对样式进行了修改，还原了beta时用的样式
 
-详情请看 [样式美化 - badge颜色](../style/index.md#badge颜色)
 :::
 
 ::: warning 注意
@@ -683,7 +682,6 @@ yarn -v
 ::: tip 说明
 为什么我又3个小圆点，因为我更改了样式
 
-可以等你搭建完成再来修改 [代码组风格](../style/index.md#代码组风格)
 :::
 
 ::: code-group
