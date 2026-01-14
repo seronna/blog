@@ -1,4 +1,4 @@
-declare module "vitepress-plugin-google-analytics" {
+declare module 'vitepress-plugin-google-analytics' {
   interface GoogleAnalyticsOptions {
     id: string;
   }

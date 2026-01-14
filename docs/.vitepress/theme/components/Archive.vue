@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ARCHIVE_DATA, getTotalArticles } from "../utils/archive";
+import { ARCHIVE_DATA, getTotalArticles } from '../utils/archive';
 
 const totalArticles = getTotalArticles();
 const currentYearArticles = ARCHIVE_DATA[0]?.count || 0;
@@ -54,11 +54,7 @@ const currentYear =
           <p class="article-desc">{{ article.desc }}</p>
 
           <div class="article-tags">
-            <span
-              v-for="tag in article.tags"
-              :key="tag"
-              class="tag"
-            >
+            <span v-for="tag in article.tags" :key="tag" class="tag">
               #{{ tag }}
             </span>
           </div>

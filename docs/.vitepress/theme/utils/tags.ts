@@ -17,759 +17,570 @@ export interface TagData {
 
 export const TAGS_DATA: TagData[] = [
   {
-    "tag": "学习笔记",
-    "count": 13,
-    "articles": [
+    tag: '学习笔记',
+    count: 13,
+    articles: [
       {
-        "title": "第01章_C语言入门",
-        "path": "/content/zhaji/backend/c/",
-        "date": "2026-01-14",
-        "tags": [
-          "C语言",
-          "学习笔记"
-        ],
-        "desc": "- **人类语言**：是人与人之间用于沟通的一种方式。例如：中国人与中国人用普通话沟通。而中国人要和英国人交流，可以使用普通话或英语。"
+        title: '第01章_C语言入门',
+        path: '/content/zhaji/backend/c/',
+        date: '2026-01-14',
+        tags: ['C语言', '学习笔记'],
+        desc: '- **人类语言**：是人与人之间用于沟通的一种方式。例如：中国人与中国人用普通话沟通。而中国人要和英国人交流，可以使用普通话或英语。',
       },
       {
-        "title": "CSS学习笔记_进阶",
-        "path": "/content/zhaji/frontend/CSS-advanced/",
-        "date": "2026-01-14",
-        "tags": [
-          "CSS",
-          "学习笔记"
-        ],
-        "desc": "CSS学习笔记_进阶。"
+        title: 'CSS学习笔记_进阶',
+        path: '/content/zhaji/frontend/CSS-advanced/',
+        date: '2026-01-14',
+        tags: ['CSS', '学习笔记'],
+        desc: 'CSS学习笔记_进阶。',
       },
       {
-        "title": "HTML学习笔记",
-        "path": "/content/zhaji/frontend/html/",
-        "date": "2025-12-11",
-        "tags": [
-          "HTML",
-          "学习笔记"
-        ],
-        "desc": "HTML学习笔记。"
+        title: 'HTML学习笔记',
+        path: '/content/zhaji/frontend/html/',
+        date: '2025-12-11',
+        tags: ['HTML', '学习笔记'],
+        desc: 'HTML学习笔记。',
       },
       {
-        "title": "HTML学习笔记_进阶",
-        "path": "/content/zhaji/frontend/html-advanced/",
-        "date": "2025-12-11",
-        "tags": [
-          "HTML",
-          "学习笔记"
-        ],
-        "desc": "HTML学习笔记_进阶。"
+        title: 'HTML学习笔记_进阶',
+        path: '/content/zhaji/frontend/html-advanced/',
+        date: '2025-12-11',
+        tags: ['HTML', '学习笔记'],
+        desc: 'HTML学习笔记_进阶。',
       },
       {
-        "title": "第02章_变量与进制",
-        "path": "/content/zhaji/backend/c/第02章_变量与进制.md",
-        "date": "2025-01-14",
-        "tags": [
-          "C语言",
-          "学习笔记"
-        ],
-        "desc": "学习 C 语言中的变量与进制。"
+        title: '第02章_变量与进制',
+        path: '/content/zhaji/backend/c/第02章_变量与进制.md',
+        date: '2025-01-14',
+        tags: ['C语言', '学习笔记'],
+        desc: '学习 C 语言中的变量与进制。',
       },
       {
-        "title": "第03章_运算符与流程控制",
-        "path": "/content/zhaji/backend/c/第03章_运算符与流程控制.md",
-        "date": "2025-01-14",
-        "tags": [
-          "C语言",
-          "学习笔记"
-        ],
-        "desc": "学习 C 语言中的运算符与流程控制。"
+        title: '第03章_运算符与流程控制',
+        path: '/content/zhaji/backend/c/第03章_运算符与流程控制.md',
+        date: '2025-01-14',
+        tags: ['C语言', '学习笔记'],
+        desc: '学习 C 语言中的运算符与流程控制。',
       },
       {
-        "title": "第05章_指针",
-        "path": "/content/zhaji/backend/c/第05章_指针(重点).md",
-        "date": "2025-01-14",
-        "tags": [
-          "C语言",
-          "学习笔记"
-        ],
-        "desc": "学习 C 语言中的指针。"
+        title: '第05章_指针',
+        path: '/content/zhaji/backend/c/第05章_指针(重点).md',
+        date: '2025-01-14',
+        tags: ['C语言', '学习笔记'],
+        desc: '学习 C 语言中的指针。',
       },
       {
-        "title": "第06章_函数",
-        "path": "/content/zhaji/backend/c/第06章_函数.md",
-        "date": "2025-01-14",
-        "tags": [
-          "C语言",
-          "学习笔记"
-        ],
-        "desc": "学习 C 语言中的函数。"
+        title: '第06章_函数',
+        path: '/content/zhaji/backend/c/第06章_函数.md',
+        date: '2025-01-14',
+        tags: ['C语言', '学习笔记'],
+        desc: '学习 C 语言中的函数。',
       },
       {
-        "title": "第07章_结构体与共用体",
-        "path": "/content/zhaji/backend/c/第07章_结构体与共用体.md",
-        "date": "2025-01-14",
-        "tags": [
-          "C语言",
-          "学习笔记"
-        ],
-        "desc": "学习 C 语言中的结构体与共用体。"
+        title: '第07章_结构体与共用体',
+        path: '/content/zhaji/backend/c/第07章_结构体与共用体.md',
+        date: '2025-01-14',
+        tags: ['C语言', '学习笔记'],
+        desc: '学习 C 语言中的结构体与共用体。',
       },
       {
-        "title": "第08章_C语言常用函数",
-        "path": "/content/zhaji/backend/c/第08章_C语言常用函数.md",
-        "date": "2025-01-14",
-        "tags": [
-          "C语言",
-          "学习笔记"
-        ],
-        "desc": "学习 C 语言中的常用函数。"
+        title: '第08章_C语言常用函数',
+        path: '/content/zhaji/backend/c/第08章_C语言常用函数.md',
+        date: '2025-01-14',
+        tags: ['C语言', '学习笔记'],
+        desc: '学习 C 语言中的常用函数。',
       },
       {
-        "title": "第09章_文件操作",
-        "path": "/content/zhaji/backend/c/第09章_文件操作.md",
-        "date": "2025-01-14",
-        "tags": [
-          "C语言",
-          "学习笔记"
-        ],
-        "desc": "学习 C 语言中的文件操作。"
+        title: '第09章_文件操作',
+        path: '/content/zhaji/backend/c/第09章_文件操作.md',
+        date: '2025-01-14',
+        tags: ['C语言', '学习笔记'],
+        desc: '学习 C 语言中的文件操作。',
       },
       {
-        "title": "第09章_命令模式",
-        "path": "/content/zhaji/design-patterns/command-patterns/",
-        "date": "2025-01-14",
-        "tags": [
-          "设计模式",
-          "学习笔记"
-        ],
-        "desc": "学习命令模式。"
+        title: '第09章_命令模式',
+        path: '/content/zhaji/design-patterns/command-patterns/',
+        date: '2025-01-14',
+        tags: ['设计模式', '学习笔记'],
+        desc: '学习命令模式。',
       },
       {
-        "title": "CSS学习笔记",
-        "path": "/content/zhaji/frontend/CSS/",
-        "date": "2025-01-14",
-        "tags": [
-          "CSS",
-          "学习笔记"
-        ],
-        "desc": "CSS学习笔记。"
-      }
-    ]
+        title: 'CSS学习笔记',
+        path: '/content/zhaji/frontend/CSS/',
+        date: '2025-01-14',
+        tags: ['CSS', '学习笔记'],
+        desc: 'CSS学习笔记。',
+      },
+    ],
   },
   {
-    "tag": "C语言",
-    "count": 8,
-    "articles": [
+    tag: 'C语言',
+    count: 8,
+    articles: [
       {
-        "title": "第01章_C语言入门",
-        "path": "/content/zhaji/backend/c/",
-        "date": "2026-01-14",
-        "tags": [
-          "C语言",
-          "学习笔记"
-        ],
-        "desc": "- **人类语言**：是人与人之间用于沟通的一种方式。例如：中国人与中国人用普通话沟通。而中国人要和英国人交流，可以使用普通话或英语。"
+        title: '第01章_C语言入门',
+        path: '/content/zhaji/backend/c/',
+        date: '2026-01-14',
+        tags: ['C语言', '学习笔记'],
+        desc: '- **人类语言**：是人与人之间用于沟通的一种方式。例如：中国人与中国人用普通话沟通。而中国人要和英国人交流，可以使用普通话或英语。',
       },
       {
-        "title": "第02章_变量与进制",
-        "path": "/content/zhaji/backend/c/第02章_变量与进制.md",
-        "date": "2025-01-14",
-        "tags": [
-          "C语言",
-          "学习笔记"
-        ],
-        "desc": "学习 C 语言中的变量与进制。"
+        title: '第02章_变量与进制',
+        path: '/content/zhaji/backend/c/第02章_变量与进制.md',
+        date: '2025-01-14',
+        tags: ['C语言', '学习笔记'],
+        desc: '学习 C 语言中的变量与进制。',
       },
       {
-        "title": "第03章_运算符与流程控制",
-        "path": "/content/zhaji/backend/c/第03章_运算符与流程控制.md",
-        "date": "2025-01-14",
-        "tags": [
-          "C语言",
-          "学习笔记"
-        ],
-        "desc": "学习 C 语言中的运算符与流程控制。"
+        title: '第03章_运算符与流程控制',
+        path: '/content/zhaji/backend/c/第03章_运算符与流程控制.md',
+        date: '2025-01-14',
+        tags: ['C语言', '学习笔记'],
+        desc: '学习 C 语言中的运算符与流程控制。',
       },
       {
-        "title": "第05章_指针",
-        "path": "/content/zhaji/backend/c/第05章_指针(重点).md",
-        "date": "2025-01-14",
-        "tags": [
-          "C语言",
-          "学习笔记"
-        ],
-        "desc": "学习 C 语言中的指针。"
+        title: '第05章_指针',
+        path: '/content/zhaji/backend/c/第05章_指针(重点).md',
+        date: '2025-01-14',
+        tags: ['C语言', '学习笔记'],
+        desc: '学习 C 语言中的指针。',
       },
       {
-        "title": "第06章_函数",
-        "path": "/content/zhaji/backend/c/第06章_函数.md",
-        "date": "2025-01-14",
-        "tags": [
-          "C语言",
-          "学习笔记"
-        ],
-        "desc": "学习 C 语言中的函数。"
+        title: '第06章_函数',
+        path: '/content/zhaji/backend/c/第06章_函数.md',
+        date: '2025-01-14',
+        tags: ['C语言', '学习笔记'],
+        desc: '学习 C 语言中的函数。',
       },
       {
-        "title": "第07章_结构体与共用体",
-        "path": "/content/zhaji/backend/c/第07章_结构体与共用体.md",
-        "date": "2025-01-14",
-        "tags": [
-          "C语言",
-          "学习笔记"
-        ],
-        "desc": "学习 C 语言中的结构体与共用体。"
+        title: '第07章_结构体与共用体',
+        path: '/content/zhaji/backend/c/第07章_结构体与共用体.md',
+        date: '2025-01-14',
+        tags: ['C语言', '学习笔记'],
+        desc: '学习 C 语言中的结构体与共用体。',
       },
       {
-        "title": "第08章_C语言常用函数",
-        "path": "/content/zhaji/backend/c/第08章_C语言常用函数.md",
-        "date": "2025-01-14",
-        "tags": [
-          "C语言",
-          "学习笔记"
-        ],
-        "desc": "学习 C 语言中的常用函数。"
+        title: '第08章_C语言常用函数',
+        path: '/content/zhaji/backend/c/第08章_C语言常用函数.md',
+        date: '2025-01-14',
+        tags: ['C语言', '学习笔记'],
+        desc: '学习 C 语言中的常用函数。',
       },
       {
-        "title": "第09章_文件操作",
-        "path": "/content/zhaji/backend/c/第09章_文件操作.md",
-        "date": "2025-01-14",
-        "tags": [
-          "C语言",
-          "学习笔记"
-        ],
-        "desc": "学习 C 语言中的文件操作。"
-      }
-    ]
+        title: '第09章_文件操作',
+        path: '/content/zhaji/backend/c/第09章_文件操作.md',
+        date: '2025-01-14',
+        tags: ['C语言', '学习笔记'],
+        desc: '学习 C 语言中的文件操作。',
+      },
+    ],
   },
   {
-    "tag": "文档搭建",
-    "count": 8,
-    "articles": [
+    tag: '文档搭建',
+    count: 8,
+    articles: [
       {
-        "title": "第02章_文档搭建",
-        "path": "/content/zhaji/doc-build/assets/",
-        "date": "2025-01-14",
-        "tags": [
-          "文档搭建"
-        ],
-        "desc": "学习文档搭建。"
+        title: '第02章_文档搭建',
+        path: '/content/zhaji/doc-build/assets/',
+        date: '2025-01-14',
+        tags: ['文档搭建'],
+        desc: '学习文档搭建。',
       },
       {
-        "title": "第02章_配置",
-        "path": "/content/zhaji/doc-build/configuration/",
-        "date": "2025-01-14",
-        "tags": [
-          "文档搭建"
-        ],
-        "desc": "学习文档搭建的配置。"
+        title: '第02章_配置',
+        path: '/content/zhaji/doc-build/configuration/',
+        date: '2025-01-14',
+        tags: ['文档搭建'],
+        desc: '学习文档搭建的配置。',
       },
       {
-        "title": "第02章_Frontmatter",
-        "path": "/content/zhaji/doc-build/frontmatter/",
-        "date": "2025-01-14",
-        "tags": [
-          "文档搭建"
-        ],
-        "desc": "学习文档搭建的Frontmatter。"
+        title: '第02章_Frontmatter',
+        path: '/content/zhaji/doc-build/frontmatter/',
+        date: '2025-01-14',
+        tags: ['文档搭建'],
+        desc: '学习文档搭建的Frontmatter。',
       },
       {
-        "title": "快速上手",
-        "path": "/content/zhaji/doc-build/getting-started/",
-        "date": "2025-01-14",
-        "tags": [
-          "文档搭建"
-        ],
-        "desc": "学习文档搭建的快速上手。"
+        title: '快速上手',
+        path: '/content/zhaji/doc-build/getting-started/',
+        date: '2025-01-14',
+        tags: ['文档搭建'],
+        desc: '学习文档搭建的快速上手。',
       },
       {
-        "title": "文档搭建之Markdown",
-        "path": "/content/zhaji/doc-build/markdown/",
-        "date": "2025-01-14",
-        "tags": [
-          "文档搭建"
-        ],
-        "desc": "学习文档搭建的Markdown。"
+        title: '文档搭建之Markdown',
+        path: '/content/zhaji/doc-build/markdown/',
+        date: '2025-01-14',
+        tags: ['文档搭建'],
+        desc: '学习文档搭建的Markdown。',
       },
       {
-        "title": "文档搭建之页面",
-        "path": "/content/zhaji/doc-build/page/",
-        "date": "2025-01-14",
-        "tags": [
-          "文档搭建"
-        ],
-        "desc": "学习文档搭建的页面。"
+        title: '文档搭建之页面',
+        path: '/content/zhaji/doc-build/page/',
+        date: '2025-01-14',
+        tags: ['文档搭建'],
+        desc: '学习文档搭建的页面。',
       },
       {
-        "title": "文档搭建之前言",
-        "path": "/content/zhaji/doc-build/preface/",
-        "date": "2025-01-14",
-        "tags": [
-          "文档搭建"
-        ],
-        "desc": "学习文档搭建的前言。"
+        title: '文档搭建之前言',
+        path: '/content/zhaji/doc-build/preface/',
+        date: '2025-01-14',
+        tags: ['文档搭建'],
+        desc: '学习文档搭建的前言。',
       },
       {
-        "title": "文档搭建之团队界面",
-        "path": "/content/zhaji/doc-build/team/",
-        "date": "2025-01-14",
-        "tags": [
-          "文档搭建"
-        ],
-        "desc": "学习文档搭建的团队界面。"
-      }
-    ]
+        title: '文档搭建之团队界面',
+        path: '/content/zhaji/doc-build/team/',
+        date: '2025-01-14',
+        tags: ['文档搭建'],
+        desc: '学习文档搭建的团队界面。',
+      },
+    ],
   },
   {
-    "tag": "杂记",
-    "count": 5,
-    "articles": [
+    tag: '杂记',
+    count: 5,
+    articles: [
       {
-        "title": "后端技术",
-        "path": "/content/zhaji/backend/",
-        "date": "2026-01-14",
-        "tags": [
-          "杂记"
-        ],
-        "desc": "后端技术是指服务器端的开发技术，包括编程语言、框架、数据库等。"
+        title: '后端技术',
+        path: '/content/zhaji/backend/',
+        date: '2026-01-14',
+        tags: ['杂记'],
+        desc: '后端技术是指服务器端的开发技术，包括编程语言、框架、数据库等。',
       },
       {
-        "title": "设计模式",
-        "path": "/content/zhaji/design-patterns/",
-        "date": "2026-01-14",
-        "tags": [
-          "杂记"
-        ],
-        "desc": "设计模式是解决软件设计中常见问题的可复用方案。"
+        title: '设计模式',
+        path: '/content/zhaji/design-patterns/',
+        date: '2026-01-14',
+        tags: ['杂记'],
+        desc: '设计模式是解决软件设计中常见问题的可复用方案。',
       },
       {
-        "title": "文档搭建",
-        "path": "/content/zhaji/doc-build/",
-        "date": "2026-01-14",
-        "tags": [
-          "杂记"
-        ],
-        "desc": "本部分记录了如何使用 VitePress 搭建和配置文档网站。"
+        title: '文档搭建',
+        path: '/content/zhaji/doc-build/',
+        date: '2026-01-14',
+        tags: ['杂记'],
+        desc: '本部分记录了如何使用 VitePress 搭建和配置文档网站。',
       },
       {
-        "title": "JavaScript 学习笔记",
-        "path": "/content/zhaji/frontend/JavaScript/",
-        "date": "2026-01-14",
-        "tags": [
-          "杂记"
-        ],
-        "desc": ""
+        title: 'JavaScript 学习笔记',
+        path: '/content/zhaji/frontend/JavaScript/',
+        date: '2026-01-14',
+        tags: ['杂记'],
+        desc: '',
       },
       {
-        "title": "1. HTML",
-        "path": "/content/zhaji/frontend/",
-        "date": "2026-01-14",
-        "tags": [
-          "杂记"
-        ],
-        "desc": ""
-      }
-    ]
+        title: '1. HTML',
+        path: '/content/zhaji/frontend/',
+        date: '2026-01-14',
+        tags: ['杂记'],
+        desc: '',
+      },
+    ],
   },
   {
-    "tag": "CSS",
-    "count": 2,
-    "articles": [
+    tag: 'CSS',
+    count: 2,
+    articles: [
       {
-        "title": "CSS学习笔记_进阶",
-        "path": "/content/zhaji/frontend/CSS-advanced/",
-        "date": "2026-01-14",
-        "tags": [
-          "CSS",
-          "学习笔记"
-        ],
-        "desc": "CSS学习笔记_进阶。"
+        title: 'CSS学习笔记_进阶',
+        path: '/content/zhaji/frontend/CSS-advanced/',
+        date: '2026-01-14',
+        tags: ['CSS', '学习笔记'],
+        desc: 'CSS学习笔记_进阶。',
       },
       {
-        "title": "CSS学习笔记",
-        "path": "/content/zhaji/frontend/CSS/",
-        "date": "2025-01-14",
-        "tags": [
-          "CSS",
-          "学习笔记"
-        ],
-        "desc": "CSS学习笔记。"
-      }
-    ]
+        title: 'CSS学习笔记',
+        path: '/content/zhaji/frontend/CSS/',
+        date: '2025-01-14',
+        tags: ['CSS', '学习笔记'],
+        desc: 'CSS学习笔记。',
+      },
+    ],
   },
   {
-    "tag": "HTML",
-    "count": 2,
-    "articles": [
+    tag: 'HTML',
+    count: 2,
+    articles: [
       {
-        "title": "HTML学习笔记",
-        "path": "/content/zhaji/frontend/html/",
-        "date": "2025-12-11",
-        "tags": [
-          "HTML",
-          "学习笔记"
-        ],
-        "desc": "HTML学习笔记。"
+        title: 'HTML学习笔记',
+        path: '/content/zhaji/frontend/html/',
+        date: '2025-12-11',
+        tags: ['HTML', '学习笔记'],
+        desc: 'HTML学习笔记。',
       },
       {
-        "title": "HTML学习笔记_进阶",
-        "path": "/content/zhaji/frontend/html-advanced/",
-        "date": "2025-12-11",
-        "tags": [
-          "HTML",
-          "学习笔记"
-        ],
-        "desc": "HTML学习笔记_进阶。"
-      }
-    ]
+        title: 'HTML学习笔记_进阶',
+        path: '/content/zhaji/frontend/html-advanced/',
+        date: '2025-12-11',
+        tags: ['HTML', '学习笔记'],
+        desc: 'HTML学习笔记_进阶。',
+      },
+    ],
   },
   {
-    "tag": "Vscode、插件",
-    "count": 1,
-    "articles": [
+    tag: 'Vscode、插件',
+    count: 1,
+    articles: [
       {
-        "title": "Vscode 常用插件推荐",
-        "path": "/content/shiyi/vscoe-plugin.md",
-        "date": "2026-01-14",
-        "tags": [
-          "Vscode、插件"
-        ],
-        "desc": "推荐一些常用的 Vscode 插件，提高开发效率。"
-      }
-    ]
+        title: 'Vscode 常用插件推荐',
+        path: '/content/shiyi/vscoe-plugin.md',
+        date: '2026-01-14',
+        tags: ['Vscode、插件'],
+        desc: '推荐一些常用的 Vscode 插件，提高开发效率。',
+      },
+    ],
   },
   {
-    "tag": "JavaScript",
-    "count": 1,
-    "articles": [
+    tag: 'JavaScript',
+    count: 1,
+    articles: [
       {
-        "title": "深入理解 JavaScript 执行机制：从预编译到 AO 对象",
-        "path": "/content/shiyi/important/",
-        "date": "2025-12-25",
-        "tags": [
-          "JavaScript",
-          "执行机制",
-          "预编译"
-        ],
-        "desc": "深入探讨 JavaScript 执行机制的核心原理，包括预编译、AO 对象等关键概念。"
-      }
-    ]
+        title: '深入理解 JavaScript 执行机制：从预编译到 AO 对象',
+        path: '/content/shiyi/important/',
+        date: '2025-12-25',
+        tags: ['JavaScript', '执行机制', '预编译'],
+        desc: '深入探讨 JavaScript 执行机制的核心原理，包括预编译、AO 对象等关键概念。',
+      },
+    ],
   },
   {
-    "tag": "执行机制",
-    "count": 1,
-    "articles": [
+    tag: '执行机制',
+    count: 1,
+    articles: [
       {
-        "title": "深入理解 JavaScript 执行机制：从预编译到 AO 对象",
-        "path": "/content/shiyi/important/",
-        "date": "2025-12-25",
-        "tags": [
-          "JavaScript",
-          "执行机制",
-          "预编译"
-        ],
-        "desc": "深入探讨 JavaScript 执行机制的核心原理，包括预编译、AO 对象等关键概念。"
-      }
-    ]
+        title: '深入理解 JavaScript 执行机制：从预编译到 AO 对象',
+        path: '/content/shiyi/important/',
+        date: '2025-12-25',
+        tags: ['JavaScript', '执行机制', '预编译'],
+        desc: '深入探讨 JavaScript 执行机制的核心原理，包括预编译、AO 对象等关键概念。',
+      },
+    ],
   },
   {
-    "tag": "预编译",
-    "count": 1,
-    "articles": [
+    tag: '预编译',
+    count: 1,
+    articles: [
       {
-        "title": "深入理解 JavaScript 执行机制：从预编译到 AO 对象",
-        "path": "/content/shiyi/important/",
-        "date": "2025-12-25",
-        "tags": [
-          "JavaScript",
-          "执行机制",
-          "预编译"
-        ],
-        "desc": "深入探讨 JavaScript 执行机制的核心原理，包括预编译、AO 对象等关键概念。"
-      }
-    ]
+        title: '深入理解 JavaScript 执行机制：从预编译到 AO 对象',
+        path: '/content/shiyi/important/',
+        date: '2025-12-25',
+        tags: ['JavaScript', '执行机制', '预编译'],
+        desc: '深入探讨 JavaScript 执行机制的核心原理，包括预编译、AO 对象等关键概念。',
+      },
+    ],
   },
   {
-    "tag": "设计模式",
-    "count": 1,
-    "articles": [
+    tag: '设计模式',
+    count: 1,
+    articles: [
       {
-        "title": "第09章_命令模式",
-        "path": "/content/zhaji/design-patterns/command-patterns/",
-        "date": "2025-01-14",
-        "tags": [
-          "设计模式",
-          "学习笔记"
-        ],
-        "desc": "学习命令模式。"
-      }
-    ]
-  }
+        title: '第09章_命令模式',
+        path: '/content/zhaji/design-patterns/command-patterns/',
+        date: '2025-01-14',
+        tags: ['设计模式', '学习笔记'],
+        desc: '学习命令模式。',
+      },
+    ],
+  },
 ];
 
 // 导出所有文章（已去重）
 export const ALL_ARTICLES: Article[] = [
   {
-    "title": "Vscode 常用插件推荐",
-    "path": "/content/shiyi/vscoe-plugin.md",
-    "date": "2026-01-14",
-    "tags": [
-      "Vscode、插件"
-    ],
-    "desc": "推荐一些常用的 Vscode 插件，提高开发效率。"
+    title: 'Vscode 常用插件推荐',
+    path: '/content/shiyi/vscoe-plugin.md',
+    date: '2026-01-14',
+    tags: ['Vscode、插件'],
+    desc: '推荐一些常用的 Vscode 插件，提高开发效率。',
   },
   {
-    "title": "第01章_C语言入门",
-    "path": "/content/zhaji/backend/c/",
-    "date": "2026-01-14",
-    "tags": [
-      "C语言",
-      "学习笔记"
-    ],
-    "desc": "- **人类语言**：是人与人之间用于沟通的一种方式。例如：中国人与中国人用普通话沟通。而中国人要和英国人交流，可以使用普通话或英语。"
+    title: '第01章_C语言入门',
+    path: '/content/zhaji/backend/c/',
+    date: '2026-01-14',
+    tags: ['C语言', '学习笔记'],
+    desc: '- **人类语言**：是人与人之间用于沟通的一种方式。例如：中国人与中国人用普通话沟通。而中国人要和英国人交流，可以使用普通话或英语。',
   },
   {
-    "title": "后端技术",
-    "path": "/content/zhaji/backend/",
-    "date": "2026-01-14",
-    "tags": [
-      "杂记"
-    ],
-    "desc": "后端技术是指服务器端的开发技术，包括编程语言、框架、数据库等。"
+    title: '后端技术',
+    path: '/content/zhaji/backend/',
+    date: '2026-01-14',
+    tags: ['杂记'],
+    desc: '后端技术是指服务器端的开发技术，包括编程语言、框架、数据库等。',
   },
   {
-    "title": "设计模式",
-    "path": "/content/zhaji/design-patterns/",
-    "date": "2026-01-14",
-    "tags": [
-      "杂记"
-    ],
-    "desc": "设计模式是解决软件设计中常见问题的可复用方案。"
+    title: '设计模式',
+    path: '/content/zhaji/design-patterns/',
+    date: '2026-01-14',
+    tags: ['杂记'],
+    desc: '设计模式是解决软件设计中常见问题的可复用方案。',
   },
   {
-    "title": "文档搭建",
-    "path": "/content/zhaji/doc-build/",
-    "date": "2026-01-14",
-    "tags": [
-      "杂记"
-    ],
-    "desc": "本部分记录了如何使用 VitePress 搭建和配置文档网站。"
+    title: '文档搭建',
+    path: '/content/zhaji/doc-build/',
+    date: '2026-01-14',
+    tags: ['杂记'],
+    desc: '本部分记录了如何使用 VitePress 搭建和配置文档网站。',
   },
   {
-    "title": "CSS学习笔记_进阶",
-    "path": "/content/zhaji/frontend/CSS-advanced/",
-    "date": "2026-01-14",
-    "tags": [
-      "CSS",
-      "学习笔记"
-    ],
-    "desc": "CSS学习笔记_进阶。"
+    title: 'CSS学习笔记_进阶',
+    path: '/content/zhaji/frontend/CSS-advanced/',
+    date: '2026-01-14',
+    tags: ['CSS', '学习笔记'],
+    desc: 'CSS学习笔记_进阶。',
   },
   {
-    "title": "JavaScript 学习笔记",
-    "path": "/content/zhaji/frontend/JavaScript/",
-    "date": "2026-01-14",
-    "tags": [
-      "杂记"
-    ],
-    "desc": ""
+    title: 'JavaScript 学习笔记',
+    path: '/content/zhaji/frontend/JavaScript/',
+    date: '2026-01-14',
+    tags: ['杂记'],
+    desc: '',
   },
   {
-    "title": "1. HTML",
-    "path": "/content/zhaji/frontend/",
-    "date": "2026-01-14",
-    "tags": [
-      "杂记"
-    ],
-    "desc": ""
+    title: '1. HTML',
+    path: '/content/zhaji/frontend/',
+    date: '2026-01-14',
+    tags: ['杂记'],
+    desc: '',
   },
   {
-    "title": "深入理解 JavaScript 执行机制：从预编译到 AO 对象",
-    "path": "/content/shiyi/important/",
-    "date": "2025-12-25",
-    "tags": [
-      "JavaScript",
-      "执行机制",
-      "预编译"
-    ],
-    "desc": "深入探讨 JavaScript 执行机制的核心原理，包括预编译、AO 对象等关键概念。"
+    title: '深入理解 JavaScript 执行机制：从预编译到 AO 对象',
+    path: '/content/shiyi/important/',
+    date: '2025-12-25',
+    tags: ['JavaScript', '执行机制', '预编译'],
+    desc: '深入探讨 JavaScript 执行机制的核心原理，包括预编译、AO 对象等关键概念。',
   },
   {
-    "title": "HTML学习笔记",
-    "path": "/content/zhaji/frontend/html/",
-    "date": "2025-12-11",
-    "tags": [
-      "HTML",
-      "学习笔记"
-    ],
-    "desc": "HTML学习笔记。"
+    title: 'HTML学习笔记',
+    path: '/content/zhaji/frontend/html/',
+    date: '2025-12-11',
+    tags: ['HTML', '学习笔记'],
+    desc: 'HTML学习笔记。',
   },
   {
-    "title": "HTML学习笔记_进阶",
-    "path": "/content/zhaji/frontend/html-advanced/",
-    "date": "2025-12-11",
-    "tags": [
-      "HTML",
-      "学习笔记"
-    ],
-    "desc": "HTML学习笔记_进阶。"
+    title: 'HTML学习笔记_进阶',
+    path: '/content/zhaji/frontend/html-advanced/',
+    date: '2025-12-11',
+    tags: ['HTML', '学习笔记'],
+    desc: 'HTML学习笔记_进阶。',
   },
   {
-    "title": "第02章_变量与进制",
-    "path": "/content/zhaji/backend/c/第02章_变量与进制.md",
-    "date": "2025-01-14",
-    "tags": [
-      "C语言",
-      "学习笔记"
-    ],
-    "desc": "学习 C 语言中的变量与进制。"
+    title: '第02章_变量与进制',
+    path: '/content/zhaji/backend/c/第02章_变量与进制.md',
+    date: '2025-01-14',
+    tags: ['C语言', '学习笔记'],
+    desc: '学习 C 语言中的变量与进制。',
   },
   {
-    "title": "第03章_运算符与流程控制",
-    "path": "/content/zhaji/backend/c/第03章_运算符与流程控制.md",
-    "date": "2025-01-14",
-    "tags": [
-      "C语言",
-      "学习笔记"
-    ],
-    "desc": "学习 C 语言中的运算符与流程控制。"
+    title: '第03章_运算符与流程控制',
+    path: '/content/zhaji/backend/c/第03章_运算符与流程控制.md',
+    date: '2025-01-14',
+    tags: ['C语言', '学习笔记'],
+    desc: '学习 C 语言中的运算符与流程控制。',
   },
   {
-    "title": "第05章_指针",
-    "path": "/content/zhaji/backend/c/第05章_指针(重点).md",
-    "date": "2025-01-14",
-    "tags": [
-      "C语言",
-      "学习笔记"
-    ],
-    "desc": "学习 C 语言中的指针。"
+    title: '第05章_指针',
+    path: '/content/zhaji/backend/c/第05章_指针(重点).md',
+    date: '2025-01-14',
+    tags: ['C语言', '学习笔记'],
+    desc: '学习 C 语言中的指针。',
   },
   {
-    "title": "第06章_函数",
-    "path": "/content/zhaji/backend/c/第06章_函数.md",
-    "date": "2025-01-14",
-    "tags": [
-      "C语言",
-      "学习笔记"
-    ],
-    "desc": "学习 C 语言中的函数。"
+    title: '第06章_函数',
+    path: '/content/zhaji/backend/c/第06章_函数.md',
+    date: '2025-01-14',
+    tags: ['C语言', '学习笔记'],
+    desc: '学习 C 语言中的函数。',
   },
   {
-    "title": "第07章_结构体与共用体",
-    "path": "/content/zhaji/backend/c/第07章_结构体与共用体.md",
-    "date": "2025-01-14",
-    "tags": [
-      "C语言",
-      "学习笔记"
-    ],
-    "desc": "学习 C 语言中的结构体与共用体。"
+    title: '第07章_结构体与共用体',
+    path: '/content/zhaji/backend/c/第07章_结构体与共用体.md',
+    date: '2025-01-14',
+    tags: ['C语言', '学习笔记'],
+    desc: '学习 C 语言中的结构体与共用体。',
   },
   {
-    "title": "第08章_C语言常用函数",
-    "path": "/content/zhaji/backend/c/第08章_C语言常用函数.md",
-    "date": "2025-01-14",
-    "tags": [
-      "C语言",
-      "学习笔记"
-    ],
-    "desc": "学习 C 语言中的常用函数。"
+    title: '第08章_C语言常用函数',
+    path: '/content/zhaji/backend/c/第08章_C语言常用函数.md',
+    date: '2025-01-14',
+    tags: ['C语言', '学习笔记'],
+    desc: '学习 C 语言中的常用函数。',
   },
   {
-    "title": "第09章_文件操作",
-    "path": "/content/zhaji/backend/c/第09章_文件操作.md",
-    "date": "2025-01-14",
-    "tags": [
-      "C语言",
-      "学习笔记"
-    ],
-    "desc": "学习 C 语言中的文件操作。"
+    title: '第09章_文件操作',
+    path: '/content/zhaji/backend/c/第09章_文件操作.md',
+    date: '2025-01-14',
+    tags: ['C语言', '学习笔记'],
+    desc: '学习 C 语言中的文件操作。',
   },
   {
-    "title": "第09章_命令模式",
-    "path": "/content/zhaji/design-patterns/command-patterns/",
-    "date": "2025-01-14",
-    "tags": [
-      "设计模式",
-      "学习笔记"
-    ],
-    "desc": "学习命令模式。"
+    title: '第09章_命令模式',
+    path: '/content/zhaji/design-patterns/command-patterns/',
+    date: '2025-01-14',
+    tags: ['设计模式', '学习笔记'],
+    desc: '学习命令模式。',
   },
   {
-    "title": "第02章_文档搭建",
-    "path": "/content/zhaji/doc-build/assets/",
-    "date": "2025-01-14",
-    "tags": [
-      "文档搭建"
-    ],
-    "desc": "学习文档搭建。"
+    title: '第02章_文档搭建',
+    path: '/content/zhaji/doc-build/assets/',
+    date: '2025-01-14',
+    tags: ['文档搭建'],
+    desc: '学习文档搭建。',
   },
   {
-    "title": "第02章_配置",
-    "path": "/content/zhaji/doc-build/configuration/",
-    "date": "2025-01-14",
-    "tags": [
-      "文档搭建"
-    ],
-    "desc": "学习文档搭建的配置。"
+    title: '第02章_配置',
+    path: '/content/zhaji/doc-build/configuration/',
+    date: '2025-01-14',
+    tags: ['文档搭建'],
+    desc: '学习文档搭建的配置。',
   },
   {
-    "title": "第02章_Frontmatter",
-    "path": "/content/zhaji/doc-build/frontmatter/",
-    "date": "2025-01-14",
-    "tags": [
-      "文档搭建"
-    ],
-    "desc": "学习文档搭建的Frontmatter。"
+    title: '第02章_Frontmatter',
+    path: '/content/zhaji/doc-build/frontmatter/',
+    date: '2025-01-14',
+    tags: ['文档搭建'],
+    desc: '学习文档搭建的Frontmatter。',
   },
   {
-    "title": "快速上手",
-    "path": "/content/zhaji/doc-build/getting-started/",
-    "date": "2025-01-14",
-    "tags": [
-      "文档搭建"
-    ],
-    "desc": "学习文档搭建的快速上手。"
+    title: '快速上手',
+    path: '/content/zhaji/doc-build/getting-started/',
+    date: '2025-01-14',
+    tags: ['文档搭建'],
+    desc: '学习文档搭建的快速上手。',
   },
   {
-    "title": "文档搭建之Markdown",
-    "path": "/content/zhaji/doc-build/markdown/",
-    "date": "2025-01-14",
-    "tags": [
-      "文档搭建"
-    ],
-    "desc": "学习文档搭建的Markdown。"
+    title: '文档搭建之Markdown',
+    path: '/content/zhaji/doc-build/markdown/',
+    date: '2025-01-14',
+    tags: ['文档搭建'],
+    desc: '学习文档搭建的Markdown。',
   },
   {
-    "title": "文档搭建之页面",
-    "path": "/content/zhaji/doc-build/page/",
-    "date": "2025-01-14",
-    "tags": [
-      "文档搭建"
-    ],
-    "desc": "学习文档搭建的页面。"
+    title: '文档搭建之页面',
+    path: '/content/zhaji/doc-build/page/',
+    date: '2025-01-14',
+    tags: ['文档搭建'],
+    desc: '学习文档搭建的页面。',
   },
   {
-    "title": "文档搭建之前言",
-    "path": "/content/zhaji/doc-build/preface/",
-    "date": "2025-01-14",
-    "tags": [
-      "文档搭建"
-    ],
-    "desc": "学习文档搭建的前言。"
+    title: '文档搭建之前言',
+    path: '/content/zhaji/doc-build/preface/',
+    date: '2025-01-14',
+    tags: ['文档搭建'],
+    desc: '学习文档搭建的前言。',
   },
   {
-    "title": "文档搭建之团队界面",
-    "path": "/content/zhaji/doc-build/team/",
-    "date": "2025-01-14",
-    "tags": [
-      "文档搭建"
-    ],
-    "desc": "学习文档搭建的团队界面。"
+    title: '文档搭建之团队界面',
+    path: '/content/zhaji/doc-build/team/',
+    date: '2025-01-14',
+    tags: ['文档搭建'],
+    desc: '学习文档搭建的团队界面。',
   },
   {
-    "title": "CSS学习笔记",
-    "path": "/content/zhaji/frontend/CSS/",
-    "date": "2025-01-14",
-    "tags": [
-      "CSS",
-      "学习笔记"
-    ],
-    "desc": "CSS学习笔记。"
-  }
+    title: 'CSS学习笔记',
+    path: '/content/zhaji/frontend/CSS/',
+    date: '2025-01-14',
+    tags: ['CSS', '学习笔记'],
+    desc: 'CSS学习笔记。',
+  },
 ];
