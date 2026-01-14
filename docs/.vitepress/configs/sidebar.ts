@@ -1,129 +1,133 @@
 /* configs/sidebar.ts */
-import type { DefaultTheme } from "vitepress";
+import type { DefaultTheme } from 'vitepress';
 
-export const sidebar: DefaultTheme.Config["sidebar"] = {
+export const sidebar: DefaultTheme.Config['sidebar'] = {
   // 札记 - 技术学习笔记
-  "/content/zhaji/frontend/": [
+  '/content/zhaji/frontend/': [
     {
-      text: "入门",
+      text: '入门',
       collapsed: false,
       items: [
-        { text: "HTML", link: "/content/zhaji/frontend/html/" },
-        { text: "HTML进阶", link: "/content/zhaji/frontend/html-advanced/" },
-        { text: "CSS", link: "/content/zhaji/frontend/CSS/" },
-        { text: "CSS进阶", link: "/content/zhaji/frontend/CSS-advanced/" },
-        { text: "JavaScript", link: "/content/zhaji/frontend/js/" },
+        { text: 'HTML', link: '/content/zhaji/frontend/html/' },
+        { text: 'HTML进阶', link: '/content/zhaji/frontend/html-advanced/' },
+        { text: 'CSS', link: '/content/zhaji/frontend/CSS/' },
+        { text: 'CSS进阶', link: '/content/zhaji/frontend/CSS-advanced/' },
+        { text: 'JavaScript', link: '/content/zhaji/frontend/js/' },
       ],
     },
     {
-      text: "进阶",
+      text: '进阶',
       items: [],
     },
   ],
 
-  "/content/zhaji/backend/c/": [
-    { text: "C语言入门", link: "/content/zhaji/backend/c/" },
+  '/content/zhaji/backend/c/': [
+    { text: 'C语言入门', link: '/content/zhaji/backend/c/' },
     {
-      text: "变量与进制",
-      link: "/content/zhaji/backend/c/第02章_变量与进制.md",
+      text: '变量与进制',
+      link: '/content/zhaji/backend/c/第02章_变量与进制.md',
     },
     {
-      text: "运算符与流程控制",
-      link: "/content/zhaji/backend/c/第03章_运算符与流程控制.md",
+      text: '运算符与流程控制',
+      link: '/content/zhaji/backend/c/第03章_运算符与流程控制.md',
     },
-    { text: "指针", link: "/content/zhaji/backend/c/第05章_指针(重点).md" },
-    { text: "函数", link: "/content/zhaji/backend/c/第06章_函数.md" },
+    { text: '指针', link: '/content/zhaji/backend/c/第05章_指针(重点).md' },
+    { text: '函数', link: '/content/zhaji/backend/c/第06章_函数.md' },
     {
-      text: "结构体与共用体",
-      link: "/content/zhaji/backend/c/第07章_结构体与共用体.md",
+      text: '结构体与共用体',
+      link: '/content/zhaji/backend/c/第07章_结构体与共用体.md',
     },
     {
-      text: "C语言常用函数",
-      link: "/content/zhaji/backend/c/第08章_C语言常用函数.md",
+      text: 'C语言常用函数',
+      link: '/content/zhaji/backend/c/第08章_C语言常用函数.md',
     },
-    { text: "文章操作", link: "/content/zhaji/backend/c/第09章_文件操作.md" },
+    { text: '文章操作', link: '/content/zhaji/backend/c/第09章_文件操作.md' },
   ],
 
   // 札记 - 技术日常分享
-  "/content/zhaji/doc-build/": [
+  '/content/zhaji/doc-build/': [
     {
-      text: "介绍",
+      text: '介绍',
       items: [
-        { text: "前言", link: "/content/zhaji/doc-build/preface/index.md" },
+        { text: '前言', link: '/content/zhaji/doc-build/preface/index.md' },
       ],
     },
     {
-      text: "基础设置",
+      text: '基础设置',
       collapsed: false,
       items: [
         {
-          text: "快速上手",
-          link: "/content/zhaji/doc-build/getting-started/index.md",
+          text: '快速上手',
+          link: '/content/zhaji/doc-build/getting-started/index.md',
         },
         {
-          text: "配置",
-          link: "/content/zhaji/doc-build/configuration/index.md",
+          text: '配置',
+          link: '/content/zhaji/doc-build/configuration/index.md',
         },
-        { text: "页面", link: "/content/zhaji/doc-build/page/index.md" },
+        { text: '页面', link: '/content/zhaji/doc-build/page/index.md' },
         {
-          text: "Frontmatter",
-          link: "/content/zhaji/doc-build/frontmatter/index.md",
+          text: 'Frontmatter',
+          link: '/content/zhaji/doc-build/frontmatter/index.md',
         },
       ],
     },
     {
-      text: "进阶玩法",
+      text: '进阶玩法',
       collapsed: false,
       items: [
         {
-          text: "markdown",
-          link: "/content/zhaji/doc-build/markdown/index.md",
+          text: 'markdown',
+          link: '/content/zhaji/doc-build/markdown/index.md',
         },
       ],
     },
   ],
 
-  "/content/zhaji/": [
+  '/content/zhaji/': [
     {
-      text: "技术学习与分享",
+      text: '技术学习与分享',
       items: [
-        { text: "前端", link: "/content/zhaji/frontend/" },
-        { text: "后端", link: "/content/zhaji/backend/" },
-        { text: "设计模式", link: "/content/zhaji/design-patterns/" },
-        { text: "文档搭建", link: "/content/zhaji/doc-build/" },
+        { text: '前端', link: '/content/zhaji/frontend/' },
+        { text: '后端', link: '/content/zhaji/backend/' },
+        { text: '设计模式', link: '/content/zhaji/design-patterns/' },
+        { text: '文档搭建', link: '/content/zhaji/doc-build/' },
       ],
     },
   ],
 
-  "/content/yiyu/": [
+  '/content/yiyu/': [
     {
-      text: "生活随笔",
+      text: '生活随笔',
       items: [],
     },
   ],
 
-  "/content/qilu/": [
+  '/content/qilu/': [
     {
-      text: "Bug/填坑",
+      text: 'Bug/填坑',
       items: [],
     },
   ],
 
-  "/content/shiyi/": [
+  '/content/shiyi/': [
     {
-      text: "记录",
+      text: '记录',
       items: [
         {
-          text: "深入理解 JavaScript 执行机制：从预编译到 AO 对象",
-          link: "/content/shiyi/important/",
+          text: '深入理解 JavaScript 执行机制：从预编译到 AO 对象',
+          link: '/content/shiyi/important/',
+        },
+        {
+          text: 'Vscode 常用插件推荐',
+          link: '/content/shiyi/vscoe-plugin/',
         },
       ],
     },
   ],
 
-  "/content/mohen/": [
+  '/content/mohen/': [
     {
-      text: "标签",
+      text: '标签',
       items: [],
     },
   ],

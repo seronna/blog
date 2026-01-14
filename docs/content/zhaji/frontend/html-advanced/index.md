@@ -1,5 +1,8 @@
 ---
 tags: [HTML，学习笔记]
+date: 2025-12-11
+title: HTML学习笔记_进阶
+desc: HTML学习笔记_进阶。
 ---
 ## iframe 元素
 框架页

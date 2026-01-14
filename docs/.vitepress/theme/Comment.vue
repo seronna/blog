@@ -41,7 +41,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { useData } from "vitepress";
+import { useData } from 'vitepress';
 // 获取当前配色方案
 const { isDark } = useData();
 </script>
